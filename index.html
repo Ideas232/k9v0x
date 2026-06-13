@@ -1739,7 +1739,8 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   function transformLive(e) {
     const fmt = e.format || '';
     const surf = e.surface || '';
-    const isRevco = (e.divisions || []).some(d => /reverse\s*coed/i.test(d));
+    const isRevco = (e.divisions || []).some(d => /reverse\s*coed/i.test(d))
+      || /reverse\s*coed|\brev\s*co\b/i.test(e.name || '');
     const fmtLabel = isRevco && fmt ? 'Revco ' + fmt : fmt;
     const formatStr = fmtLabel && surf ? fmtLabel + ' · ' + surf : (fmtLabel || surf || '');
     const fee = (e.feeUSD != null && e.feeUSD !== '') ? '$' + e.feeUSD : '—';

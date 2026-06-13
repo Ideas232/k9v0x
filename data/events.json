@@ -969,11 +969,11 @@
           "items": [
             {
               "label": "Check-in",
-              "value": "9:00am"
+              "value": "8:30am"
             },
             {
               "label": "First serve",
-              "value": "3:30pm"
+              "value": "9:00am"
             }
           ]
         },
@@ -1024,11 +1024,7 @@
           "items": [
             {
               "label": "Check-in",
-              "value": "9:00am"
-            },
-            {
-              "label": "Start",
-              "value": "3:30pm"
+              "value": "8:30am"
             }
           ]
         },
@@ -1079,11 +1075,11 @@
           "items": [
             {
               "label": "Check-in",
-              "value": "9:00am"
+              "value": "8:30am"
             },
             {
               "label": "First serve",
-              "value": "3:30pm"
+              "value": "9:00am"
             }
           ]
         },
@@ -1134,11 +1130,11 @@
           "items": [
             {
               "label": "Check-in",
-              "value": "9:00am"
+              "value": "8:30am"
             },
             {
               "label": "First serve",
-              "value": "3:30pm"
+              "value": "9:00am"
             }
           ]
         },
@@ -1188,11 +1184,11 @@
           "items": [
             {
               "label": "Check-in",
-              "value": "9:00am"
+              "value": "8:30am"
             },
             {
               "label": "First serve",
-              "value": "3:30pm"
+              "value": "9:00am"
             }
           ]
         },
@@ -1243,11 +1239,11 @@
           "items": [
             {
               "label": "Check-in",
-              "value": "10:00am"
+              "value": "9:30am"
             },
             {
               "label": "First serve",
-              "value": "3:30pm"
+              "value": "10:00am"
             }
           ]
         },
@@ -1467,27 +1463,6 @@
             {
               "label": "Open",
               "value": "no cap"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "7:30am (email)"
-            },
-            {
-              "label": "Arrive by",
-              "value": "8:30am"
-            },
-            {
-              "label": "Briefing",
-              "value": "9:00am"
-            },
-            {
-              "label": "First serve",
-              "value": "9:00am"
             }
           ]
         },
