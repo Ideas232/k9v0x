@@ -85,11 +85,13 @@
       "sourceUrl": "https://www.facebook.com/events/836582889465761/",
       "name": "Power Doubles W & M",
       "startDate": "2026-06-27",
-      "location": { "city": "Bay Area", "state": "CA" },
-      "divisions": ["Women's", "Men's"],
+      "location": { "venue": "McGregor Field", "city": "Newark", "state": "CA" },
+      "divisions": ["Upper Women", "Lower Women", "Upper Men", "Lower Men"],
       "registrationUrl": "http://bit.ly/fvbl-2s-mw-rsvp-2",
       "format": "2s",
       "surface": "grass",
+      "feeUSD": 60,
+      "registrationDeadline": "2026-06-21",
       "description": "Power Doubles (Women's and Men's) — a Saturday grass doubles tournament hosted by FVBL (@fvbleague), the long-running Bay Area grass series that runs out of the Newark/Fremont area. Players sign up through the bit.ly RSVP form, which feeds directly to the organizers — that's the link to use, not the Facebook event. Format is standard FVBL doubles: shorter (2s) court, women's net height for the W division and men's height for M, pool play into a playoff bracket, one timeout per set, 5-minute warmups, and the usual FVBL hand rules (no open-hand passing on serve receive or rallies, set-overs only on 2nd/3rd touch and must be square, blocks don't count as a touch). Teams BYO whistle for reffing and BYO ball, shade, food, and water. Carpooling encouraged."
     },
     {
