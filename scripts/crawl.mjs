@@ -35,6 +35,7 @@ const SOURCES = [
 
 const here = dirname(fileURLToPath(import.meta.url));
 const EVENTS_JSON = resolve(here, '../data/events.json');
+const STATUS_JSON = resolve(here, '../data/crawl-status.json');
 const dry = process.argv.includes('--dry');
 
 const log = (...a) => console.log('[crawl]', ...a);
@@ -42,27 +43,27 @@ const log = (...a) => console.log('[crawl]', ...a);
 async function run() {
   const existing = JSON.parse(readFileSync(EVENTS_JSON, 'utf8'));
   const byId = new Map((existing.events || []).map(e => [e.id, e]));
-  const allErrors = [];
+  const status = { startedAt: new Date().toISOString(), sources: {} };
   let added = 0, updated = 0, fetched = 0;
 
   for (const [name, mod] of SOURCES) {
     log(`fetching ${name}…`);
+    const t0 = Date.now();
     let result;
     try { result = await mod.fetchEvents(); }
     catch (e) {
-      allErrors.push(`${name} threw: ${e.stack || e.message}`);
+      status.sources[name] = { ok: false, durationMs: Date.now() - t0, events: 0, added: 0, updated: 0, errors: [`threw: ${e.message}`] };
       continue;
     }
-    const errors = result.errors || [];
+    const errors = (result.errors || []).slice();
     const evs = (result.events || []).filter(e => e && e.id && e.startDate);
-    log(`  ${name}: ${evs.length} events, ${errors.length} errors`);
-    fetched += evs.length;
+    const dropped = (result.events || []).length - evs.length;
+    if (dropped) errors.push(`${dropped} event(s) skipped (missing id or startDate)`);
+    let srcAdded = 0, srcUpdated = 0;
     for (const ev of evs) {
       const old = byId.get(ev.id);
-      if (!old) { byId.set(ev.id, ev); added++; }
+      if (!old) { byId.set(ev.id, ev); srcAdded++; added++; }
       else {
-        // Field-merge: fresh fetch wins for non-empty fields, but preserve
-        // any fields the fetch didn't include (e.g. manually-curated notes).
         const merged = { ...old };
         for (const [k, v] of Object.entries(ev)) {
           if (v == null) continue;
@@ -72,30 +73,40 @@ async function run() {
         }
         if (JSON.stringify(merged) !== JSON.stringify(old)) {
           byId.set(ev.id, merged);
-          updated++;
+          srcUpdated++; updated++;
         }
       }
     }
-    allErrors.push(...errors);
+    fetched += evs.length;
+    status.sources[name] = {
+      ok: errors.length === 0,
+      durationMs: Date.now() - t0,
+      events: evs.length,
+      added: srcAdded,
+      updated: srcUpdated,
+      errors,
+    };
+    log(`  ${name}: ${evs.length} events (${srcAdded} new, ${srcUpdated} updated), ${errors.length} errors`);
   }
 
+  status.finishedAt = new Date().toISOString();
+  status.totals = { sources: SOURCES.length, fetched, added, updated };
+
   const next = {
-    updatedAt: new Date().toISOString(),
+    updatedAt: status.finishedAt,
     events: [...byId.values()].sort((a, b) => (a.startDate || '').localeCompare(b.startDate || '')),
   };
 
   log(`fetched ${fetched} events from ${SOURCES.length} sources — added ${added}, updated ${updated}`);
-  if (allErrors.length) {
-    log(`errors:`);
-    for (const e of allErrors) log(`  - ${e}`);
-  }
 
-  if (dry) { log('dry run — no write.'); return; }
+  if (dry) { log('dry run — no write.'); console.log(JSON.stringify(status, null, 2)); return; }
+
+  writeFileSync(STATUS_JSON, JSON.stringify(status, null, 2) + '\n');
+  log('wrote', STATUS_JSON);
 
   const before = readFileSync(EVENTS_JSON, 'utf8');
   const after = JSON.stringify(next, null, 2) + '\n';
   if (before === after) { log('no change to events.json'); return; }
-
   writeFileSync(EVENTS_JSON, after);
   log('wrote', EVENTS_JSON);
 }

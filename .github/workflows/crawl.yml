@@ -21,14 +21,14 @@ jobs:
       - name: Run crawler
         run: node scripts/crawl.mjs
 
-      - name: Commit and push if events.json changed
+      - name: Commit and push if data changed
         run: |
-          if git diff --quiet -- data/events.json; then
-            echo "No changes to events.json — nothing to commit."
+          if git diff --quiet -- data/events.json data/crawl-status.json; then
+            echo "No data changes — nothing to commit."
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data/events.json
+          git add data/events.json data/crawl-status.json
           git commit -m "Daily crawl: $(date -u +%Y-%m-%d)"
           git push
