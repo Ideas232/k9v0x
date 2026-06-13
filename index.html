@@ -451,13 +451,26 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
 
 .sheet .description {
   font-family: var(--sans);
-  font-size: var(--t14);
+  font-size: var(--t13);
   color: var(--ink-soft);
   line-height: 1.55;
+  margin-top: var(--s5);
   margin-bottom: var(--s7);
+  padding-top: var(--s5);
+  border-top: 1px solid var(--line);
   white-space: pre-line;
   -webkit-user-select: text;
   user-select: text;
+}
+.sheet .description:not(:empty)::before {
+  content: 'Notes';
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--s4);
 }
 .sheet .description:empty { display: none; }
 
@@ -962,8 +975,8 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
       <span data-venue></span><span data-city-sep> · </span><span class="city" data-city></span>
     </a>
     <div class="facts" data-facts></div>
-    <div class="description" data-description></div>
     <div class="details" data-details></div>
+    <div class="description" data-description></div>
   </div>
   <div class="actions">
     <a class="btn primary" data-source-btn target="_blank" rel="noopener" aria-disabled="true" tabindex="-1">Registration unavailable</a>
