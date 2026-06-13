@@ -519,6 +519,78 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   word-break: break-word;
 }
 
+/* Contacts — pill buttons */
+.sheet .contacts { display: flex; flex-direction: column; gap: var(--s4); }
+.sheet .contact-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s4);
+}
+.sheet .contact-row .name {
+  font-family: var(--sans);
+  font-size: var(--t14);
+  font-weight: 500;
+  color: var(--ink);
+}
+.sheet .contact-row .btns { display: flex; gap: var(--s2); }
+.sheet .contact-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px;
+  font-family: var(--sans);
+  font-size: var(--t13);
+  font-weight: 500;
+  color: var(--ink);
+  background: #f4f4f4;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.sheet .contact-btn:hover { background: #e8e8e8; }
+.sheet .contact-btn svg { width: 14px; height: 14px; }
+
+/* Ratings scale — segmented bar, low → high skill */
+.sheet .rating-scale {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.sheet .rating-scale .seg {
+  padding: 10px 8px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  background: #fafafa;
+}
+.sheet .rating-scale .seg:last-child { border-right: none; }
+.sheet .rating-scale .seg:nth-child(2) { background: #f4f4f4; }
+.sheet .rating-scale .seg:nth-child(3) { background: #ececec; }
+.sheet .rating-scale .seg:nth-child(4) { background: #e0e0e0; }
+.sheet .rating-scale .seg:nth-child(5) { background: #d4d4d4; }
+.sheet .rating-scale .seg .div {
+  font-family: var(--sans);
+  font-size: var(--t13);
+  font-weight: 600;
+  color: var(--ink);
+}
+.sheet .rating-scale .seg .cap {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  margin-top: 2px;
+  white-space: nowrap;
+}
+.sheet .rating-axis {
+  display: flex; justify-content: space-between;
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .sheet .divisions-label {
   font-family: var(--sans);
   font-size: var(--t12);
@@ -996,18 +1068,73 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
         h.textContent = sec.heading;
         section.appendChild(h);
       }
-      const grid = document.createElement('div');
-      grid.className = 'grid' + (sec.layout === 'list' ? ' list' : '');
-      sec.items.forEach(it => {
-        if (!it) return;
-        const item = document.createElement('div');
-        item.className = 'item';
-        const k = document.createElement('div'); k.className = 'k'; k.textContent = it.label || '';
-        const v = document.createElement('div'); v.className = 'v'; v.textContent = it.value || '';
-        item.appendChild(k); item.appendChild(v);
-        grid.appendChild(item);
-      });
-      section.appendChild(grid);
+      if (sec.type === 'contacts') {
+        const wrap = document.createElement('div');
+        wrap.className = 'contacts';
+        sec.items.forEach(it => {
+          if (!it) return;
+          const row = document.createElement('div');
+          row.className = 'contact-row';
+          const name = document.createElement('span');
+          name.className = 'name';
+          name.textContent = it.label || it.name || '';
+          row.appendChild(name);
+          const btns = document.createElement('div');
+          btns.className = 'btns';
+          if (it.email) {
+            const a = document.createElement('a');
+            a.className = 'contact-btn';
+            a.href = 'mailto:' + it.email;
+            a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Email</span>';
+            btns.appendChild(a);
+          }
+          if (it.phone) {
+            const a = document.createElement('a');
+            a.className = 'contact-btn';
+            a.href = 'tel:' + it.phone.replace(/[^\d+]/g, '');
+            a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg><span>Call</span>';
+            btns.appendChild(a);
+          }
+          row.appendChild(btns);
+          wrap.appendChild(row);
+        });
+        section.appendChild(wrap);
+      } else if (sec.type === 'ratings') {
+        const wrap = document.createElement('div');
+        wrap.className = 'rating-scale';
+        wrap.style.setProperty('--cols', sec.items.length);
+        sec.items.forEach(it => {
+          if (!it) return;
+          const seg = document.createElement('div');
+          seg.className = 'seg';
+          const d = document.createElement('div'); d.className = 'div'; d.textContent = it.label || '';
+          const c = document.createElement('div'); c.className = 'cap'; c.textContent = it.value || '';
+          seg.appendChild(d); seg.appendChild(c);
+          wrap.appendChild(seg);
+        });
+        section.appendChild(wrap);
+        if (sec.axis !== false) {
+          const axis = document.createElement('div');
+          axis.className = 'rating-axis';
+          const lo = document.createElement('span'); lo.textContent = sec.axisLow || 'easier';
+          const hi = document.createElement('span'); hi.textContent = sec.axisHigh || 'harder';
+          axis.appendChild(lo); axis.appendChild(hi);
+          section.appendChild(axis);
+        }
+      } else {
+        const grid = document.createElement('div');
+        grid.className = 'grid' + (sec.layout === 'list' ? ' list' : '');
+        sec.items.forEach(it => {
+          if (!it) return;
+          const item = document.createElement('div');
+          item.className = 'item';
+          const k = document.createElement('div'); k.className = 'k'; k.textContent = it.label || '';
+          const v = document.createElement('div'); v.className = 'v'; v.textContent = it.value || '';
+          item.appendChild(k); item.appendChild(v);
+          grid.appendChild(item);
+        });
+        section.appendChild(grid);
+      }
       detailsEl.appendChild(section);
     });
 

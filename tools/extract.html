@@ -122,6 +122,9 @@ function extractRatings(text) {
       seen.add(k);
     }
   }
+  // Sort low → high skill (B, BB, A, AA, Open)
+  const order = { B: 0, BB: 1, A: 2, AA: 3, Open: 4 };
+  items.sort((x, y) => (order[x.label] ?? 99) - (order[y.label] ?? 99));
   return items;
 }
 
@@ -137,9 +140,7 @@ function extractFormat(text) {
 
 function extractContacts(text) {
   const items = [];
-  // "Name (email / phone)" or "Name (email, phone)"
   const re1 = /([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})\s*\(\s*([\w._%+-]+@[\w.-]+\.\w{2,})(?:\s*[\/,]\s*([\d\s.\-()]{7,}))?\s*\)/g;
-  // or "Name: email / phone"
   const re2 = /([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})[\s:]+([\w._%+-]+@[\w.-]+\.\w{2,})(?:\s*[\/,]\s*([\d\s.\-()]{7,}))?/g;
   const seen = new Set();
   for (const re of [re1, re2]) {
@@ -149,7 +150,9 @@ function extractContacts(text) {
       if (seen.has(name)) continue;
       const email = m[2];
       const phone = (m[3] || '').replace(/\s+/g, ' ').trim();
-      items.push({ label: name, value: phone ? email + ' · ' + phone : email });
+      const item = { label: name, email };
+      if (phone) item.phone = phone;
+      items.push(item);
       seen.add(name);
     }
   }
@@ -169,11 +172,11 @@ function shortDescription(text) {
 
 function extract(text) {
   const sections = [];
-  const sched = extractSchedule(text);  if (sched.length) sections.push({ heading: 'Schedule', items: sched });
-  const price = extractPricing(text);   if (price.length) sections.push({ heading: 'Pricing', items: price });
-  const rating = extractRatings(text);  if (rating.length) sections.push({ heading: 'Ratings', items: rating });
-  const format = extractFormat(text);   if (format.length) sections.push({ heading: 'Format', items: format });
-  const contact = extractContacts(text); if (contact.length) sections.push({ heading: 'Contact', layout: 'list', items: contact });
+  const contact = extractContacts(text); if (contact.length) sections.push({ heading: 'Contact', type: 'contacts', items: contact });
+  const rating = extractRatings(text);   if (rating.length) sections.push({ heading: 'Ratings', type: 'ratings', axisLow: 'Beginner', axisHigh: 'Open', items: rating });
+  const sched = extractSchedule(text);   if (sched.length) sections.push({ heading: 'Schedule', items: sched });
+  const price = extractPricing(text);    if (price.length) sections.push({ heading: 'Pricing', items: price });
+  const format = extractFormat(text);    if (format.length) sections.push({ heading: 'Format', items: format });
   return { description: shortDescription(text), details: sections };
 }
 
