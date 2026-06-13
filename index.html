@@ -678,10 +678,16 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
 }
 .sheet .divisions-grouped .row {
   display: grid;
-  grid-template-columns: 92px 1fr;
+  grid-template-columns: 36px 76px 1fr;
   align-items: center;
   gap: var(--s4);
 }
+.sheet .divisions-grouped .gender-ico {
+  width: 24px; height: 24px;
+  color: var(--ink-soft);
+  display: grid; place-items: center;
+}
+.sheet .divisions-grouped .gender-ico svg { width: 24px; height: 24px; }
 .sheet .divisions-grouped .gender {
   font-family: var(--sans);
   font-size: var(--t12);
@@ -741,6 +747,92 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   font-size: var(--t13);
   color: var(--ink);
   margin-top: var(--s3);
+}
+
+/* Facts strip — chips below venue */
+.sheet .facts {
+  display: flex; flex-wrap: wrap; gap: var(--s2);
+  margin-bottom: var(--s5);
+}
+.sheet .facts:empty { display: none; }
+.sheet .fact {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px;
+  font-family: var(--sans);
+  font-size: var(--t12);
+  font-weight: 500;
+  color: var(--ink);
+  background: #f4f4f4;
+  border-radius: 999px;
+}
+.sheet .fact.urgent { background: #ffe7d6; color: #b14400; }
+.sheet .fact .ico { width: 12px; height: 12px; opacity: 0.7; }
+
+/* Schedule clocks — analog faces */
+.sheet .clocks {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
+  gap: var(--s4);
+  padding: var(--s2) 0;
+}
+.sheet .clocks .step {
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.sheet .clocks .clock-svg {
+  width: 40px; height: 40px;
+  color: var(--ink);
+}
+.sheet .clocks .clock-time {
+  font-family: var(--sans);
+  font-size: var(--t13);
+  font-weight: 600;
+  color: var(--ink);
+}
+.sheet .clocks .clock-label {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  line-height: 1.25;
+}
+
+/* Court visual for Format */
+.sheet .court-block {
+  display: flex; gap: var(--s7); align-items: center;
+  margin-bottom: var(--s4);
+}
+.sheet .court-svg { flex-shrink: 0; }
+.sheet .court-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s4);
+  flex: 1;
+}
+.sheet .court-stats .cell .v {
+  font-family: var(--serif);
+  font-size: var(--t20);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.sheet .court-stats .cell .v.long {
+  font-family: var(--sans);
+  font-size: var(--t14);
+  font-weight: 500;
+}
+.sheet .court-stats .cell .sub {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.sheet .court-stats .cell .k {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
 }
 
 .sheet .divisions-label {
@@ -869,28 +961,9 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
     <a class="venue" target="_blank" rel="noopener">
       <span data-venue></span><span data-city-sep> · </span><span class="city" data-city></span>
     </a>
+    <div class="facts" data-facts></div>
     <div class="description" data-description></div>
-    <div class="stats">
-      <div class="stat">
-        <div class="k">Format</div>
-        <div class="v" data-format></div>
-      </div>
-      <div class="stat">
-        <div class="k">Fee</div>
-        <div class="v" data-fee></div>
-      </div>
-      <div class="stat">
-        <div class="k">Deadline</div>
-        <div class="v" data-deadline></div>
-      </div>
-      <div class="stat">
-        <div class="k">Source</div>
-        <div class="v" data-source></div>
-      </div>
-    </div>
     <div class="details" data-details></div>
-    <div class="divisions-label">Divisions</div>
-    <div class="divisions" data-divisions></div>
   </div>
   <div class="actions">
     <a class="btn primary" data-source-btn target="_blank" rel="noopener" aria-disabled="true" tabindex="-1">Registration unavailable</a>
@@ -1186,10 +1259,19 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
     } else {
       venueLink.removeAttribute('href');
     }
-    SHEET.querySelector('[data-format]').textContent = format || '—';
-    SHEET.querySelector('[data-fee]').textContent = fee || '—';
-    SHEET.querySelector('[data-deadline]').textContent = deadline || '—';
-    SHEET.querySelector('[data-source]').textContent = source || '—';
+
+    // Facts strip: format chip + deadline chip
+    const factsEl = SHEET.querySelector('[data-facts]');
+    factsEl.innerHTML = '';
+    if (format && format !== '—') {
+      const f = document.createElement('span'); f.className = 'fact'; f.textContent = format;
+      factsEl.appendChild(f);
+    }
+    if (deadline && deadline !== '—') {
+      const f = document.createElement('span'); f.className = 'fact';
+      f.textContent = 'Reg by ' + deadline;
+      factsEl.appendChild(f);
+    }
 
     const regUrl = eventEl.dataset.registrationUrl || '';
     const regBtn = SHEET.querySelector('[data-source-btn]');
@@ -1211,7 +1293,12 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
     const detailsEl = SHEET.querySelector('[data-details]');
     detailsEl.innerHTML = '';
     const rawEv = eventEl.dataset.id && RAW_BY_ID.get(eventEl.dataset.id);
-    const sections = (rawEv && Array.isArray(rawEv.details)) ? rawEv.details : [];
+    const sections = (rawEv && Array.isArray(rawEv.details)) ? rawEv.details.slice() : [];
+    if (divisions.length > 0) {
+      sections.push({ heading: 'Divisions', type: 'divisions', items: divisions.map(d => ({ value: d })) });
+    }
+    const PRIO = { 'Schedule': 1, 'Divisions': 2, 'Pricing': 3, 'Ratings': 4, 'Format': 5, 'Contact': 6 };
+    sections.sort((a, b) => (PRIO[a.heading] ?? 99) - (PRIO[b.heading] ?? 99));
     sections.forEach(sec => {
       if (!sec || !Array.isArray(sec.items) || sec.items.length === 0) return;
       const section = document.createElement('div');
@@ -1275,17 +1362,34 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
           axis.appendChild(lo); axis.appendChild(hi);
           section.appendChild(axis);
         }
-      } else if ((sec.heading === 'Schedule' || sec.type === 'timeline') && sec.items.every(it => /^\d{1,2}:\d{2}\s*(?:am|pm)?$/i.test((it.value || '').trim()))) {
+      } else if ((sec.heading === 'Schedule' || sec.type === 'timeline') && sec.items.every(it => /\d{1,2}:\d{2}/.test((it.value || '').trim()))) {
         const wrap = document.createElement('div');
-        wrap.className = 'timeline';
+        wrap.className = 'clocks';
         wrap.style.setProperty('--cols', sec.items.length);
         sec.items.forEach(it => {
           const step = document.createElement('div');
           step.className = 'step';
-          const t = document.createElement('div'); t.className = 'time'; t.textContent = it.value || '';
-          const d = document.createElement('div'); d.className = 'dot';
-          const l = document.createElement('div'); l.className = 'label'; l.textContent = it.label || '';
-          step.appendChild(t); step.appendChild(d); step.appendChild(l);
+          const tm = (it.value || '').trim();
+          const m = tm.match(/^(\d{1,2}):(\d{2})\s*(am|pm)?/i);
+          let hourAng = 0, minAng = 0;
+          if (m) {
+            let h = parseInt(m[1], 10);
+            const mm = parseInt(m[2], 10);
+            const pm = (m[3] || '').toLowerCase() === 'pm';
+            if (pm && h < 12) h += 12;
+            if (!pm && h === 12) h = 0;
+            hourAng = ((h % 12) + mm / 60) * 30;
+            minAng = mm * 6;
+          }
+          step.innerHTML = `
+            <svg class="clock-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round">
+              <circle cx="12" cy="12" r="10" stroke-width="1.2"/>
+              <line x1="12" y1="12" x2="12" y2="6.5" stroke-width="1.6" transform="rotate(${hourAng} 12 12)"/>
+              <line x1="12" y1="12" x2="12" y2="4.5" stroke-width="1" transform="rotate(${minAng} 12 12)"/>
+              <circle cx="12" cy="12" r="0.9" fill="currentColor" stroke="none"/>
+            </svg>
+            <div class="clock-time">${tm.replace(/\s+/g, '').toLowerCase()}</div>
+            <div class="clock-label">${escapeHTML(it.label || '')}</div>`;
           wrap.appendChild(step);
         });
         section.appendChild(wrap);
@@ -1324,16 +1428,38 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
           section.appendChild(row);
         });
       } else if (sec.heading === 'Format' || sec.type === 'stats') {
-        const stats = document.createElement('div');
-        stats.className = 'format-stats';
-        stats.style.setProperty('--cols', Math.max(1, Math.min(sec.items.length, 3)));
+        // Court visual + hero stats. Number of player dots derived from event format ("2s","3s","4s","6s").
+        const fmtRaw = (rawEv && rawEv.format) || '';
+        const perSide = parseInt((fmtRaw.match(/(\d+)s/) || [])[1] || '6', 10);
+        const positions = {
+          2: [[30, 22], [30, 38]],
+          3: [[15, 30], [38, 18], [38, 42]],
+          4: [[16, 18], [16, 42], [38, 18], [38, 42]],
+          6: [[12, 14], [12, 30], [12, 46], [38, 14], [38, 30], [38, 46]],
+        }[perSide] || [[12, 14], [12, 30], [12, 46], [38, 14], [38, 30], [38, 46]];
+        const dots = [];
+        positions.forEach(([x, y]) => dots.push([x, y]));
+        positions.forEach(([x, y]) => dots.push([100 - x, y]));
+        const dotSvg = dots.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="2.4" fill="currentColor"/>`).join('');
+        const courtBlock = document.createElement('div');
+        courtBlock.className = 'court-block';
+        courtBlock.innerHTML = `
+          <svg class="court-svg" viewBox="0 0 100 60" width="120" height="72" fill="none" stroke="currentColor" stroke-width="0.8" color="var(--ink-soft)">
+            <rect x="2" y="2" width="96" height="56" rx="2"/>
+            <line x1="50" y1="2" x2="50" y2="58" stroke-width="1.6"/>
+            <line x1="22" y1="2" x2="22" y2="58" stroke-dasharray="2 2"/>
+            <line x1="78" y1="2" x2="78" y2="58" stroke-dasharray="2 2"/>
+            <g color="var(--ink)">${dotSvg}</g>
+          </svg>
+          <div class="court-stats"></div>`;
+        const cs = courtBlock.querySelector('.court-stats');
         sec.items.forEach(it => {
           const cell = document.createElement('div');
           cell.className = 'cell';
           const valM = (it.value || '').match(/^(.*?)\s*\(([^)]+)\)\s*$/);
           const heroVal = valM ? valM[1].trim() : (it.value || '');
           const v = document.createElement('div');
-          v.className = 'v' + (heroVal.length > 14 ? ' long' : '');
+          v.className = 'v' + (heroVal.length > 12 ? ' long' : '');
           v.textContent = heroVal;
           cell.appendChild(v);
           if (valM) {
@@ -1342,9 +1468,69 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
           }
           const k = document.createElement('div'); k.className = 'k'; k.textContent = it.label || '';
           cell.appendChild(k);
-          stats.appendChild(cell);
+          cs.appendChild(cell);
         });
-        section.appendChild(stats);
+        section.appendChild(courtBlock);
+      } else if (sec.heading === 'Divisions' || sec.type === 'divisions') {
+        const divs = sec.items.map(it => it.value);
+        const groups = new Map();
+        const genderRe = /\b(Reverse\s+Coed|Men'?s|Women'?s|Coed|Mixed|Boys|Girls|Junior)\b/i;
+        const canon = (g) => {
+          const x = g.toLowerCase().replace(/\s+/g, ' ');
+          if (/reverse\s+coed/.test(x)) return 'Reverse Coed';
+          if (/^men'?s/.test(x)) return "Men's";
+          if (/^women'?s/.test(x)) return "Women's";
+          if (/^coed/.test(x)) return 'Coed';
+          if (/^mixed/.test(x)) return 'Mixed';
+          if (/^boys/.test(x)) return 'Boys';
+          if (/^girls/.test(x)) return 'Girls';
+          if (/^junior/.test(x)) return 'Junior';
+          return g;
+        };
+        divs.forEach(d => {
+          const m = d.match(genderRe);
+          let key, skill;
+          if (m) {
+            key = canon(m[0]);
+            skill = d.replace(genderRe, '').trim() || '—';
+          } else {
+            const m2 = d.match(/^(\S+(?:\s+\S+)?)\s+(Men|Women)$/i);
+            if (m2) { key = canon(m2[2] + "'s"); skill = m2[1]; }
+            else { key = 'Open'; skill = d; }
+          }
+          if (!groups.has(key)) groups.set(key, []);
+          groups.get(key).push(skill);
+        });
+        const order = ["Women's", "Men's", 'Coed', 'Reverse Coed', 'Mixed', 'Boys', 'Girls', 'Junior', 'Open'];
+        const sortedKeys = [...groups.keys()].sort((a, b) => {
+          const ai = order.indexOf(a), bi = order.indexOf(b);
+          return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+        });
+        const ICON_W = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M9 11h6l-1.5 6h-3z"/><path d="M10.5 17l-1 4M13.5 17l1 4"/></svg>';
+        const ICON_M = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M8 11h8v6H8z"/><path d="M9.5 17v4M14.5 17v4"/></svg>';
+        const ICON_BOTH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6" r="2.5"/><circle cx="16" cy="6" r="2.5"/><path d="M5.5 11h5l-1 5h-3z"/><path d="M13.5 11h5v5h-5z"/></svg>';
+        const ICON_NEUTRAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M7 21v-6a5 5 0 0110 0v6"/></svg>';
+        const iconFor = (k) => {
+          if (k === "Women's" || k === 'Girls') return ICON_W;
+          if (k === "Men's" || k === 'Boys') return ICON_M;
+          if (k === 'Coed' || k === 'Reverse Coed' || k === 'Mixed') return ICON_BOTH;
+          return ICON_NEUTRAL;
+        };
+        const wrap = document.createElement('div');
+        wrap.className = 'divisions-grouped';
+        sortedKeys.forEach(key => {
+          const row = document.createElement('div'); row.className = 'row';
+          const icoBox = document.createElement('div'); icoBox.className = 'gender-ico'; icoBox.innerHTML = iconFor(key);
+          const g = document.createElement('div'); g.className = 'gender'; g.textContent = key;
+          const s = document.createElement('div'); s.className = 'skills';
+          groups.get(key).forEach(sk => {
+            const sp = document.createElement('span'); sp.className = 'tag'; sp.textContent = sk;
+            s.appendChild(sp);
+          });
+          row.appendChild(icoBox); row.appendChild(g); row.appendChild(s);
+          wrap.appendChild(row);
+        });
+        section.appendChild(wrap);
       } else {
         const grid = document.createElement('div');
         grid.className = 'grid' + (sec.layout === 'list' ? ' list' : '');
@@ -1369,74 +1555,6 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
       const hasId = !!eventEl.dataset.id;
       addCalBtn.disabled = !hasId;
       addCalBtn.style.opacity = hasId ? '1' : '0.4';
-    }
-
-    const divEl = SHEET.querySelector('[data-divisions]');
-    divEl.innerHTML = '';
-    divEl.className = 'divisions';
-    if (divisions.length > 0) {
-      const groups = new Map();
-      const genderRe = /\b(Reverse\s+Coed|Men'?s|Women'?s|Coed|Mixed|Boys|Girls|Junior|Open\s+Coed)\b/i;
-      const canonical = (g) => {
-        const x = g.toLowerCase().replace(/\s+/g, ' ');
-        if (/reverse\s+coed/.test(x)) return 'Reverse Coed';
-        if (/^men'?s/.test(x)) return "Men's";
-        if (/^women'?s/.test(x)) return "Women's";
-        if (/^coed/.test(x)) return 'Coed';
-        if (/^mixed/.test(x)) return 'Mixed';
-        if (/^boys/.test(x)) return 'Boys';
-        if (/^girls/.test(x)) return 'Girls';
-        if (/^junior/.test(x)) return 'Junior';
-        return g;
-      };
-      divisions.forEach(d => {
-        const m = d.match(genderRe);
-        let key, skill;
-        if (m) {
-          key = canonical(m[0]);
-          skill = d.replace(genderRe, '').trim() || '—';
-        } else {
-          // patterns like "Upper Women", "Lower Men" — gender after skill
-          const m2 = d.match(/^(\S+(?:\s+\S+)?)\s+(Men|Women)$/i);
-          if (m2) {
-            key = canonical(m2[2] + "'s");
-            skill = m2[1];
-          } else {
-            key = 'Open';
-            skill = d;
-          }
-        }
-        if (!groups.has(key)) groups.set(key, []);
-        groups.get(key).push(skill);
-      });
-      const order = ["Women's", "Men's", 'Coed', 'Reverse Coed', 'Mixed', 'Boys', 'Girls', 'Junior', 'Open'];
-      const useGroups = groups.size > 1 || (groups.size === 1 && [...groups.values()][0].length > 1 && [...groups.keys()][0] !== 'Open');
-      if (useGroups) {
-        divEl.className = 'divisions-grouped';
-        const sortedKeys = [...groups.keys()].sort((a, b) => {
-          const ai = order.indexOf(a), bi = order.indexOf(b);
-          return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
-        });
-        sortedKeys.forEach(key => {
-          const row = document.createElement('div');
-          row.className = 'row';
-          const g = document.createElement('div'); g.className = 'gender'; g.textContent = key;
-          const s = document.createElement('div'); s.className = 'skills';
-          groups.get(key).forEach(sk => {
-            const sp = document.createElement('span'); sp.className = 'tag'; sp.textContent = sk;
-            s.appendChild(sp);
-          });
-          row.appendChild(g); row.appendChild(s);
-          divEl.appendChild(row);
-        });
-      } else {
-        divisions.forEach(d => {
-          const span = document.createElement('span');
-          span.className = 'tag';
-          span.textContent = d;
-          divEl.appendChild(span);
-        });
-      }
     }
 
     SCRIM.classList.add('open');
