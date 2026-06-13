@@ -594,6 +594,155 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   text-transform: uppercase;
 }
 
+/* Schedule timeline — horizontal time strip with dots */
+.sheet .timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
+  padding: 4px 0 2px;
+}
+.sheet .timeline::before {
+  content: '';
+  position: absolute;
+  left: calc(100% / var(--cols, 4) / 2);
+  right: calc(100% / var(--cols, 4) / 2);
+  top: 30px;
+  height: 1px;
+  background: var(--line);
+  z-index: 0;
+}
+.sheet .timeline .step { position: relative; z-index: 1; text-align: center; padding: 0 4px; }
+.sheet .timeline .step .time {
+  font-family: var(--sans);
+  font-size: var(--t13);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.sheet .timeline .step .dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--ink);
+  margin: 0 auto 8px;
+  box-shadow: 0 0 0 4px #fff;
+}
+.sheet .timeline .step .label {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Format stats — hero values with small labels */
+.sheet .format-stats {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  gap: var(--s5) var(--s4);
+}
+.sheet .format-stats .cell {
+  display: flex; flex-direction: column;
+  align-items: flex-start;
+}
+.sheet .format-stats .cell .v {
+  font-family: var(--serif);
+  font-size: var(--t22);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.sheet .format-stats .cell .v.long {
+  font-family: var(--sans);
+  font-size: var(--t14);
+  font-weight: 500;
+}
+.sheet .format-stats .cell .sub {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.sheet .format-stats .cell .k {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 6px;
+}
+
+/* Divisions — grouped matrix by gender */
+.sheet .divisions-grouped {
+  display: flex; flex-direction: column;
+  gap: var(--s4);
+  margin-bottom: var(--s8);
+}
+.sheet .divisions-grouped .row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  align-items: center;
+  gap: var(--s4);
+}
+.sheet .divisions-grouped .gender {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.sheet .divisions-grouped .skills { display: flex; flex-wrap: wrap; gap: 5px; }
+
+/* Pricing tiers — big price, unit, label */
+.sheet .pricing-tiers {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 2), 1fr);
+  gap: var(--s4);
+}
+.sheet .pricing-tiers .tier {
+  padding: var(--s5) var(--s5);
+  background: #f4f4f4;
+  border-radius: 12px;
+  display: flex; flex-direction: column;
+}
+.sheet .pricing-tiers .tier.highlight {
+  background: var(--ink);
+  color: var(--bg);
+}
+.sheet .pricing-tiers .tier .price {
+  font-family: var(--serif);
+  font-size: var(--t26);
+  font-weight: 500;
+  line-height: 1;
+}
+.sheet .pricing-tiers .tier .unit {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  margin-top: 4px;
+}
+.sheet .pricing-tiers .tier.highlight .unit { color: rgba(255,255,255,0.7); }
+.sheet .pricing-tiers .tier .label {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: var(--s3);
+}
+.sheet .pricing-tiers .tier.highlight .label { color: rgba(255,255,255,0.9); }
+.sheet .pricing-tiers .tier .sub {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.sheet .pricing-tiers .tier.highlight .sub { color: rgba(255,255,255,0.7); }
+.sheet .pricing-tiers .tier .extra-row {
+  font-family: var(--sans);
+  font-size: var(--t13);
+  color: var(--ink);
+  margin-top: var(--s3);
+}
+
 .sheet .divisions-label {
   font-family: var(--sans);
   font-size: var(--t12);
@@ -1126,6 +1275,76 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
           axis.appendChild(lo); axis.appendChild(hi);
           section.appendChild(axis);
         }
+      } else if ((sec.heading === 'Schedule' || sec.type === 'timeline') && sec.items.every(it => /^\d{1,2}:\d{2}\s*(?:am|pm)?$/i.test((it.value || '').trim()))) {
+        const wrap = document.createElement('div');
+        wrap.className = 'timeline';
+        wrap.style.setProperty('--cols', sec.items.length);
+        sec.items.forEach(it => {
+          const step = document.createElement('div');
+          step.className = 'step';
+          const t = document.createElement('div'); t.className = 'time'; t.textContent = it.value || '';
+          const d = document.createElement('div'); d.className = 'dot';
+          const l = document.createElement('div'); l.className = 'label'; l.textContent = it.label || '';
+          step.appendChild(t); step.appendChild(d); step.appendChild(l);
+          wrap.appendChild(step);
+        });
+        section.appendChild(wrap);
+      } else if (sec.heading === 'Pricing' || sec.type === 'pricing') {
+        const tiers = document.createElement('div');
+        tiers.className = 'pricing-tiers';
+        const priceTiers = sec.items.filter(it => /^\$/.test((it.value || '').trim()));
+        const extras = sec.items.filter(it => !/^\$/.test((it.value || '').trim()));
+        tiers.style.setProperty('--cols', Math.max(1, Math.min(priceTiers.length, 3)));
+        priceTiers.forEach((it, i) => {
+          const tier = document.createElement('div');
+          tier.className = 'tier' + (i === 0 ? ' highlight' : '');
+          const v = (it.value || '').trim();
+          const m = v.match(/^\$([\d,.]+)\s*(?:\/\s*(\w+))?/);
+          const price = document.createElement('div'); price.className = 'price'; price.textContent = m ? '$' + m[1] : v;
+          tier.appendChild(price);
+          if (m && m[2]) {
+            const u = document.createElement('div'); u.className = 'unit'; u.textContent = '/ ' + m[2];
+            tier.appendChild(u);
+          }
+          const lblM = (it.label || '').match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+          const lbl = document.createElement('div'); lbl.className = 'label'; lbl.textContent = lblM ? lblM[1].trim() : (it.label || '');
+          tier.appendChild(lbl);
+          if (lblM) {
+            const sub = document.createElement('div'); sub.className = 'sub'; sub.textContent = lblM[2].trim();
+            tier.appendChild(sub);
+          }
+          tiers.appendChild(tier);
+        });
+        section.appendChild(tiers);
+        extras.forEach(it => {
+          const row = document.createElement('div');
+          row.className = 'extra-row';
+          row.style.cssText = 'margin-top:10px;font-family:var(--sans);font-size:var(--t13);color:var(--ink-soft);';
+          row.innerHTML = '<span style="color:var(--muted)">' + (it.label || '') + ':</span> ' + (it.value || '');
+          section.appendChild(row);
+        });
+      } else if (sec.heading === 'Format' || sec.type === 'stats') {
+        const stats = document.createElement('div');
+        stats.className = 'format-stats';
+        stats.style.setProperty('--cols', Math.max(1, Math.min(sec.items.length, 3)));
+        sec.items.forEach(it => {
+          const cell = document.createElement('div');
+          cell.className = 'cell';
+          const valM = (it.value || '').match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+          const heroVal = valM ? valM[1].trim() : (it.value || '');
+          const v = document.createElement('div');
+          v.className = 'v' + (heroVal.length > 14 ? ' long' : '');
+          v.textContent = heroVal;
+          cell.appendChild(v);
+          if (valM) {
+            const sub = document.createElement('div'); sub.className = 'sub'; sub.textContent = valM[2].trim();
+            cell.appendChild(sub);
+          }
+          const k = document.createElement('div'); k.className = 'k'; k.textContent = it.label || '';
+          cell.appendChild(k);
+          stats.appendChild(cell);
+        });
+        section.appendChild(stats);
       } else {
         const grid = document.createElement('div');
         grid.className = 'grid' + (sec.layout === 'list' ? ' list' : '');
@@ -1154,12 +1373,71 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
 
     const divEl = SHEET.querySelector('[data-divisions]');
     divEl.innerHTML = '';
-    divisions.forEach(d => {
-      const span = document.createElement('span');
-      span.className = 'tag';
-      span.textContent = d;
-      divEl.appendChild(span);
-    });
+    divEl.className = 'divisions';
+    if (divisions.length > 0) {
+      const groups = new Map();
+      const genderRe = /\b(Reverse\s+Coed|Men'?s|Women'?s|Coed|Mixed|Boys|Girls|Junior|Open\s+Coed)\b/i;
+      const canonical = (g) => {
+        const x = g.toLowerCase().replace(/\s+/g, ' ');
+        if (/reverse\s+coed/.test(x)) return 'Reverse Coed';
+        if (/^men'?s/.test(x)) return "Men's";
+        if (/^women'?s/.test(x)) return "Women's";
+        if (/^coed/.test(x)) return 'Coed';
+        if (/^mixed/.test(x)) return 'Mixed';
+        if (/^boys/.test(x)) return 'Boys';
+        if (/^girls/.test(x)) return 'Girls';
+        if (/^junior/.test(x)) return 'Junior';
+        return g;
+      };
+      divisions.forEach(d => {
+        const m = d.match(genderRe);
+        let key, skill;
+        if (m) {
+          key = canonical(m[0]);
+          skill = d.replace(genderRe, '').trim() || '—';
+        } else {
+          // patterns like "Upper Women", "Lower Men" — gender after skill
+          const m2 = d.match(/^(\S+(?:\s+\S+)?)\s+(Men|Women)$/i);
+          if (m2) {
+            key = canonical(m2[2] + "'s");
+            skill = m2[1];
+          } else {
+            key = 'Open';
+            skill = d;
+          }
+        }
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(skill);
+      });
+      const order = ["Women's", "Men's", 'Coed', 'Reverse Coed', 'Mixed', 'Boys', 'Girls', 'Junior', 'Open'];
+      const useGroups = groups.size > 1 || (groups.size === 1 && [...groups.values()][0].length > 1 && [...groups.keys()][0] !== 'Open');
+      if (useGroups) {
+        divEl.className = 'divisions-grouped';
+        const sortedKeys = [...groups.keys()].sort((a, b) => {
+          const ai = order.indexOf(a), bi = order.indexOf(b);
+          return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+        });
+        sortedKeys.forEach(key => {
+          const row = document.createElement('div');
+          row.className = 'row';
+          const g = document.createElement('div'); g.className = 'gender'; g.textContent = key;
+          const s = document.createElement('div'); s.className = 'skills';
+          groups.get(key).forEach(sk => {
+            const sp = document.createElement('span'); sp.className = 'tag'; sp.textContent = sk;
+            s.appendChild(sp);
+          });
+          row.appendChild(g); row.appendChild(s);
+          divEl.appendChild(row);
+        });
+      } else {
+        divisions.forEach(d => {
+          const span = document.createElement('span');
+          span.className = 'tag';
+          span.textContent = d;
+          divEl.appendChild(span);
+        });
+      }
+    }
 
     SCRIM.classList.add('open');
     SHEET.classList.add('open');
