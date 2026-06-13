@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Description → Details extractor</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #fafafa; --ink: #111; --muted: #777; --line: #e5e5e5;
+    --accent: #0c4a6e;
+    --serif: 'Crimson Pro', Georgia, ui-serif, serif;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: var(--sans);
+    max-width: 920px; margin: 0 auto; padding: 32px 24px 64px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 { font-family: var(--serif); font-size: 32px; font-weight: 500; }
+  p.lead { color: var(--muted); margin: 8px 0 24px; line-height: 1.5; font-size: 14px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 720px) { .row { grid-template-columns: 1fr; } }
+  label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 6px; }
+  textarea, pre, input {
+    width: 100%; font-family: ui-monospace, Menlo, monospace; font-size: 13px;
+    border: 1px solid var(--line); border-radius: 8px; padding: 12px;
+    background: #fff; color: var(--ink); line-height: 1.5;
+  }
+  textarea { min-height: 320px; resize: vertical; }
+  pre { min-height: 320px; overflow: auto; white-space: pre; }
+  .actions { display: flex; gap: 12px; margin-top: 16px; align-items: center; }
+  button {
+    padding: 10px 18px; border: none; border-radius: 8px;
+    background: var(--ink); color: #fff; font-family: var(--sans); font-size: 14px; font-weight: 500;
+    cursor: pointer;
+  }
+  button.ghost { background: transparent; color: var(--muted); }
+  button:hover { opacity: 0.9; }
+  .status { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <h1>Description → Details</h1>
+  <p class="lead">
+    Paste a verbose tournament description on the left and click <b>Extract</b>.
+    The right side shows a cleaned-up <code>description</code> + structured
+    <code>details</code> array you can drop into <code>data/events.json</code>.
+    Regex-based — review/edit before committing.
+  </p>
+
+  <div class="row">
+    <div>
+      <label for="src">Raw description</label>
+      <textarea id="src" placeholder="Paste the brain-dump description here…"></textarea>
+    </div>
+    <div>
+      <label for="out">Extracted JSON</label>
+      <pre id="out">{ }</pre>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="run">Extract</button>
+    <button id="copy" class="ghost">Copy JSON</button>
+    <span id="status" class="status"></span>
+  </div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+function extractSchedule(text) {
+  const items = [];
+  const patterns = [
+    { label: 'Check-in', re: /check[-\s]?in[^.\n]{0,80}?(\d{1,2}:\d{2}\s*(?:am|pm)?)/i },
+    { label: 'Arrive by', re: /arriv\w*\s+(?:by|at)?[^.\n]{0,40}?(\d{1,2}:\d{2}\s*(?:am|pm)?)/i },
+    { label: 'Briefing', re: /briefing[^.\n]{0,60}?(\d{1,2}:\d{2}\s*(?:am|pm)?)/i },
+    { label: 'First serve', re: /first\s+serve[^.\n]{0,40}?(\d{1,2}:\d{2}\s*(?:am|pm)?)/i },
+  ];
+  for (const p of patterns) {
+    const m = text.match(p.re);
+    if (m) items.push({ label: p.label, value: m[1].replace(/\s+/g, '').toLowerCase() });
+  }
+  return items;
+}
+
+function extractPricing(text) {
+  const items = [];
+  const earlyRe = /\$(\d+)(?:\s*\/\s*(player|team|person|pp))?\s*(?:early)?\s*(?:through|thru|by)\s+([\d\/]+|[A-Za-z]+\s+\d+)/i;
+  const earlyM = text.match(earlyRe);
+  if (earlyM) {
+    items.push({
+      label: 'Early' + (earlyM[3] ? ' (thru ' + earlyM[3] + ')' : ''),
+      value: '$' + earlyM[1] + (earlyM[2] ? ' / ' + earlyM[2] : '')
+    });
+  }
+  const lateRe = /\$(\d+)(?:\s*\/\s*(player|team|person|pp))?\s*(?:late)/i;
+  const lateRe2 = /late[^.\n]{0,40}?\$(\d+)(?:\s*\/\s*(player|team|person|pp))?/i;
+  const lateM = text.match(lateRe) || text.match(lateRe2);
+  if (lateM) items.push({ label: 'Late', value: '$' + lateM[1] + (lateM[2] ? ' / ' + lateM[2] : '') });
+  if (/season\s+pass/i.test(text)) {
+    const sp = text.match(/season\s+pass[^.\n]{0,60}?\$(\d+)/i);
+    items.push({ label: 'Season Pass', value: sp ? '−$' + sp[1] : 'Discount' });
+  }
+  if (/junior/i.test(text)) {
+    items.push({ label: 'Juniors', value: 'See description' });
+  }
+  return items;
+}
+
+function extractRatings(text) {
+  const items = [];
+  const seen = new Set();
+  const re = /\b(Open|AA|A|BB|B)\b\s*\(([^)]+)\)/g;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    const k = m[1];
+    if (seen.has(k)) continue;
+    const v = m[2].trim();
+    if (/no\s+cap|≤|<=|\d/i.test(v)) {
+      items.push({ label: k, value: v });
+      seen.add(k);
+    }
+  }
+  return items;
+}
+
+function extractFormat(text) {
+  const items = [];
+  const capM = text.match(/(\d+)\s+(?:total\s+)?teams/i);
+  if (capM) items.push({ label: 'Team cap', value: capM[1] });
+  if (/rally\s+scoring/i.test(text)) items.push({ label: 'Scoring', value: 'Rally' });
+  const bM = text.match(/best[-\s]of[-\s](\d)\s*(?:\(([^)]+)\))?/i);
+  if (bM) items.push({ label: 'Brackets', value: 'Best-of-' + bM[1] + (bM[2] ? ' (' + bM[2] + ')' : '') });
+  return items;
+}
+
+function extractContacts(text) {
+  const items = [];
+  // "Name (email / phone)" or "Name (email, phone)"
+  const re1 = /([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})\s*\(\s*([\w._%+-]+@[\w.-]+\.\w{2,})(?:\s*[\/,]\s*([\d\s.\-()]{7,}))?\s*\)/g;
+  // or "Name: email / phone"
+  const re2 = /([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})[\s:]+([\w._%+-]+@[\w.-]+\.\w{2,})(?:\s*[\/,]\s*([\d\s.\-()]{7,}))?/g;
+  const seen = new Set();
+  for (const re of [re1, re2]) {
+    let m;
+    while ((m = re.exec(text)) !== null) {
+      const name = m[1].trim();
+      if (seen.has(name)) continue;
+      const email = m[2];
+      const phone = (m[3] || '').replace(/\s+/g, ' ').trim();
+      items.push({ label: name, value: phone ? email + ' · ' + phone : email });
+      seen.add(name);
+    }
+  }
+  return items;
+}
+
+function shortDescription(text) {
+  const t = text.replace(/\s+/g, ' ').trim();
+  const sentences = t.split(/(?<=[.!?])\s+/).filter(Boolean);
+  let out = '';
+  for (const s of sentences) {
+    if ((out + ' ' + s).length > 240) break;
+    out = out ? out + ' ' + s : s;
+  }
+  return out || sentences[0] || '';
+}
+
+function extract(text) {
+  const sections = [];
+  const sched = extractSchedule(text);  if (sched.length) sections.push({ heading: 'Schedule', items: sched });
+  const price = extractPricing(text);   if (price.length) sections.push({ heading: 'Pricing', items: price });
+  const rating = extractRatings(text);  if (rating.length) sections.push({ heading: 'Ratings', items: rating });
+  const format = extractFormat(text);   if (format.length) sections.push({ heading: 'Format', items: format });
+  const contact = extractContacts(text); if (contact.length) sections.push({ heading: 'Contact', layout: 'list', items: contact });
+  return { description: shortDescription(text), details: sections };
+}
+
+$('run').addEventListener('click', () => {
+  const text = $('src').value || '';
+  if (!text.trim()) { $('out').textContent = '{ }'; $('status').textContent = ''; return; }
+  const result = extract(text);
+  $('out').textContent = JSON.stringify(result, null, 2);
+  const sectionCount = (result.details || []).length;
+  $('status').textContent = sectionCount + ' section' + (sectionCount === 1 ? '' : 's') + ' extracted — review before committing.';
+});
+
+$('copy').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText($('out').textContent);
+    $('status').textContent = 'Copied.';
+  } catch (e) {
+    $('status').textContent = 'Copy failed: ' + e.message;
+  }
+});
+</script>
+</body>
+</html>

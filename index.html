@@ -483,6 +483,42 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
 }
 .sheet .stat .v.deadline { color: var(--ink); }
 
+.sheet .details { margin-bottom: var(--s7); }
+.sheet .details:empty { display: none; }
+.sheet .detail-section {
+  padding: var(--s5) 0;
+  border-bottom: 1px solid var(--line);
+}
+.sheet .detail-section:last-child { border-bottom: none; }
+.sheet .detail-section .heading {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--s4);
+}
+.sheet .detail-section .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s4) var(--s7);
+}
+.sheet .detail-section .grid.list { grid-template-columns: 1fr; }
+.sheet .detail-section .item .k {
+  font-family: var(--sans);
+  font-size: var(--t12);
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+.sheet .detail-section .item .v {
+  font-family: var(--sans);
+  font-size: var(--t14);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
 .sheet .divisions-label {
   font-family: var(--sans);
   font-size: var(--t12);
@@ -628,6 +664,7 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
         <div class="v" data-source></div>
       </div>
     </div>
+    <div class="details" data-details></div>
     <div class="divisions-label">Divisions</div>
     <div class="divisions" data-divisions></div>
   </div>
@@ -755,6 +792,10 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
     }
 
     // Upcoming list
+    // For the CURRENT month, hide events that have already ended — past
+    // events stay on the calendar (clickable) but don't clutter the list.
+    // For past/future months, show every event in the month.
+    const todayStart = new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate());
     const seen = new Set();
     const list = [];
     EVENTS.forEach(ev => {
@@ -764,6 +805,7 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
       const end = ev.endDate ? (parseISO(ev.endDate) || start) : start;
       const monStart = new Date(y, m, 1), monEnd = new Date(y, m+1, 0, 23,59,59);
       if (end >= monStart && start <= monEnd) {
+        if (isThisMonth && end < todayStart) return; // past event in current month
         seen.add(ev.id); list.push(ev);
       }
     });
@@ -939,6 +981,35 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
 
     const descEl = SHEET.querySelector('[data-description]');
     descEl.textContent = eventEl.dataset.description || '';
+
+    const detailsEl = SHEET.querySelector('[data-details]');
+    detailsEl.innerHTML = '';
+    const rawEv = eventEl.dataset.id && RAW_BY_ID.get(eventEl.dataset.id);
+    const sections = (rawEv && Array.isArray(rawEv.details)) ? rawEv.details : [];
+    sections.forEach(sec => {
+      if (!sec || !Array.isArray(sec.items) || sec.items.length === 0) return;
+      const section = document.createElement('div');
+      section.className = 'detail-section';
+      if (sec.heading) {
+        const h = document.createElement('div');
+        h.className = 'heading';
+        h.textContent = sec.heading;
+        section.appendChild(h);
+      }
+      const grid = document.createElement('div');
+      grid.className = 'grid' + (sec.layout === 'list' ? ' list' : '');
+      sec.items.forEach(it => {
+        if (!it) return;
+        const item = document.createElement('div');
+        item.className = 'item';
+        const k = document.createElement('div'); k.className = 'k'; k.textContent = it.label || '';
+        const v = document.createElement('div'); v.className = 'v'; v.textContent = it.value || '';
+        item.appendChild(k); item.appendChild(v);
+        grid.appendChild(item);
+      });
+      section.appendChild(grid);
+      detailsEl.appendChild(section);
+    });
 
     SHEET.dataset.eventId = eventEl.dataset.id || '';
 
@@ -1127,7 +1198,9 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   function transformLive(e) {
     const fmt = e.format || '';
     const surf = e.surface || '';
-    const formatStr = fmt && surf ? fmt + ' · ' + surf : (fmt || surf || '');
+    const isRevco = (e.divisions || []).some(d => /reverse\s*coed/i.test(d));
+    const fmtLabel = isRevco && fmt ? 'Revco ' + fmt : fmt;
+    const formatStr = fmtLabel && surf ? fmtLabel + ' · ' + surf : (fmtLabel || surf || '');
     const fee = (e.feeUSD != null && e.feeUSD !== '') ? '$' + e.feeUSD : '—';
     let deadline = null;
     if (e.registrationDeadline) {

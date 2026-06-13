@@ -446,7 +446,52 @@
       "surface": "grass",
       "registrationUrl": "https://volleyballlife.com/event/38863",
       "registrationDeadline": "2026-06-10",
-      "description": "The longest-running grass doubles tournament in the Bay Area, hosted by VolleyNation. Capped at 60 teams — division caps shift as teams register, with waitlists notified the week of.\n\nCheck-in opens 7:30am via email; arrive by 8:30am for the 9:00am rules briefing and first serve.\n\nFee is per player: $35 early through 6/10, $40 late. Season Pass holders save $5. Juniors may play any adult division — register normally and email the TD for a partial refund if both partners are under 18.\n\nDivisions placed by TruVolley (TV) Grass Ratings: Open (no cap), A (≤5.5), BB (≤4.75), B (≤4.25, or ≤4.5 if no BB). Rally scoring throughout; brackets are best-of-3 (21/21/15, no caps), with as many teams advancing as possible.\n\nContact: Mark Reuter (mreuter@volleynation.com, 925-457-5037) or Derek Childers (dchilders@volleynation.com)."
+      "description": "The longest-running grass doubles tournament in the Bay Area, hosted by VolleyNation. Capped at 60 teams — division caps shift as teams register, with waitlists notified the week of.",
+      "details": [
+        {
+          "heading": "Schedule",
+          "items": [
+            { "label": "Check-in", "value": "7:30am (email)" },
+            { "label": "Arrive by", "value": "8:30am" },
+            { "label": "Briefing", "value": "9:00am" },
+            { "label": "First serve", "value": "9:00am" }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            { "label": "Early (thru 6/10)", "value": "$35 / player" },
+            { "label": "Late", "value": "$40 / player" },
+            { "label": "Season Pass", "value": "−$5" },
+            { "label": "Juniors", "value": "Partial refund if both <18 — email TD" }
+          ]
+        },
+        {
+          "heading": "Ratings · TruVolley Grass",
+          "items": [
+            { "label": "Open", "value": "no cap" },
+            { "label": "A", "value": "≤ 5.5" },
+            { "label": "BB", "value": "≤ 4.75" },
+            { "label": "B", "value": "≤ 4.25 (≤ 4.5 if no BB)" }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            { "label": "Team cap", "value": "60" },
+            { "label": "Scoring", "value": "Rally" },
+            { "label": "Brackets", "value": "Best-of-3 (21/21/15, no caps)" }
+          ]
+        },
+        {
+          "heading": "Contact",
+          "layout": "list",
+          "items": [
+            { "label": "Mark Reuter", "value": "mreuter@volleynation.com · 925-457-5037" },
+            { "label": "Derek Childers", "value": "dchilders@volleynation.com" }
+          ]
+        }
+      ]
     },
     {
       "id": "armada-july-3rd-grass-doubles-2026",
