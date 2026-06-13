@@ -247,10 +247,14 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   100% { background: #f4f4f4; box-shadow: 0 0 0 0 rgba(0,0,0,0); }
 }
 
-.event-head {
-  display: flex; justify-content: space-between; align-items: center;
-  gap: var(--s3); margin-bottom: var(--s3);
+.day-heading {
+  font-family: var(--sans);
+  font-size: var(--t16);
+  font-weight: 500;
+  color: var(--ink);
+  padding: var(--s7) var(--s4) var(--s2);
 }
+.day-heading:first-child { padding-top: var(--s2); }
 .day-tag {
   font-family: var(--sans);
   font-size: var(--t16);
@@ -258,7 +262,10 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   color: var(--ink);
 }
 .bookmark-btn {
-  width: 44px; height: 44px;
+  position: absolute;
+  top: var(--s5);
+  right: var(--s5);
+  width: 40px; height: 40px;
   background: transparent;
   border: none;
   color: var(--ink-soft);
@@ -266,7 +273,6 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   display: grid; place-items: center;
   cursor: pointer;
   transition: all 0.15s;
-  margin-right: -8px;
 }
 .bookmark-btn:hover {
   color: var(--ink);
@@ -279,6 +285,7 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
   font-size: var(--t22);
   line-height: 1.2;
   color: var(--ink);
+  padding-right: 36px;
 }
 .event-title .multi {
   font-weight: 400;
@@ -770,6 +777,7 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
       return;
     }
 
+    let lastDayLabel = null;
     list.forEach(ev => {
       const start = parseISO(ev.date);
       const dayLabel = fmtDayTag(start);
@@ -823,19 +831,16 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
         : `<span class="arrow">→</span>`;
 
       article.innerHTML = `
-        <div class="event-head">
-          <span class="day-tag">${dayLabel}</span>
-          <button class="bookmark-btn" aria-label="Add to calendar">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/>
-              <line x1="3.5" y1="9" x2="20.5" y2="9"/>
-              <line x1="8" y1="3" x2="8" y2="6.5"/>
-              <line x1="16" y1="3" x2="16" y2="6.5"/>
-              <line x1="12" y1="12.5" x2="12" y2="17.5"/>
-              <line x1="9.5" y1="15" x2="14.5" y2="15"/>
-            </svg>
-          </button>
-        </div>
+        <button class="bookmark-btn" aria-label="Add to calendar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/>
+            <line x1="3.5" y1="9" x2="20.5" y2="9"/>
+            <line x1="8" y1="3" x2="8" y2="6.5"/>
+            <line x1="16" y1="3" x2="16" y2="6.5"/>
+            <line x1="12" y1="12.5" x2="12" y2="17.5"/>
+            <line x1="9.5" y1="15" x2="14.5" y2="15"/>
+          </svg>
+        </button>
         <h3 class="event-title">${escapeHTML(ev.title || 'Untitled tournament')}${multi}</h3>
         <p class="event-meta">${venueHTML}</p>
         <div class="event-foot">
@@ -843,6 +848,13 @@ body { width: 100%; max-width: 420px; margin: 0 auto; }
           <span class="via">${viaHTML}</span>
         </div>
       `;
+      if (dayLabel !== lastDayLabel) {
+        const heading = document.createElement('div');
+        heading.className = 'day-heading';
+        heading.textContent = dayLabel;
+        container.appendChild(heading);
+        lastDayLabel = dayLabel;
+      }
       container.appendChild(article);
     });
   }
