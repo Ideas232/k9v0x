@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T00:00:00Z",
+  "updatedAt": "2026-06-14T15:05:27.145Z",
   "events": [
     {
       "id": "tlsports-lemo-legacy-2026",
@@ -64,6 +64,82 @@
       ]
     },
     {
+      "id": "sfdynasty-power-coed-2026-03",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "Power Coed '26",
+      "startDate": "2026-03-29",
+      "location": {
+        "venue": "SF Elite Volleyball Club",
+        "city": "South San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "BB — open to all levels"
+      ],
+      "registrationUrl": "https://volleyballlife.com/event/35106",
+      "registrationDeadline": "2026-02-21",
+      "feeUSD": 420,
+      "format": "6s",
+      "surface": "indoor",
+      "description": "Sunday Mar 29, 2026 · 9am–6pm (check-in 8:15am) at SF Elite Volleyball Club, 1416 San Mateo Ave, South San Francisco. Level: BB — open to all levels. Cost: $420/team, early bird $375 until 2/21/2026. Men's height net (7'11\"). 8 players max, 2 females on court at all times, no Girl-touch rule. Subbing: girl-for-girl, guy-for-guy, no 3 guys in the front row at any time. Rally scoring. Pool play + single-elimination playoffs — all teams advance, brackets seeded by pool results. Capped at 12 teams. Min 3 confirmed players to reserve. No refunds after March 7, 2026. No refunds for no-shows. Free agent inquiries: sfdynastyvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "sfdynastyvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:15am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Early (thru 2/21/2026)",
+              "value": "$375"
+            },
+            {
+              "label": "Standard",
+              "value": "$420 / team"
+            }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            {
+              "label": "Team cap",
+              "value": "12"
+            },
+            {
+              "label": "Players / team",
+              "value": "8"
+            },
+            {
+              "label": "Scoring",
+              "value": "Rally"
+            },
+            {
+              "label": "Format",
+              "value": "Pool + playoffs"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "tlsports-power-rc-6s-apr-2026",
       "source": "tlsports",
       "sourceUrl": "https://www.tl-sports.com/tournaments",
@@ -118,6 +194,79 @@
               "label": "Organizer",
               "email": "info@tl-sports.com",
               "phone": "408-479-4403"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sfdynasty-mens-6ft-2026-05",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "Men's 6 FT and Under '26",
+      "startDate": "2026-05-31",
+      "location": {
+        "venue": "SF Elite Volleyball Club",
+        "city": "South San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "BB — open to all levels"
+      ],
+      "registrationUrl": "https://volleyballlife.com/event/36917",
+      "registrationDeadline": "2026-04-19",
+      "feeUSD": 420,
+      "format": "6s",
+      "surface": "indoor",
+      "notes": "Height-restricted: 6 ft and under",
+      "description": "Sunday May 31, 2026 · 9am–6pm (check-in 8:10am) at SF Elite Volleyball Club, 1416 San Mateo Ave, South San Francisco. Level: BB — open to all levels. Cost: $420/team of 8, early bird $375 until 4/19/2026. Men's height net (7'11 5/8\"). 8 players max per team, uniforms strongly recommended (especially with a libero). Rally scoring, pool play + single-elimination playoffs. Limited spots — all teams make playoffs, brackets seeded by pool play. Prizes 1st & 2nd in all divisions. No refunds after May 16, 2026. No refunds for no-shows. Free agent inquiries: sfdynastyvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "sfdynastyvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:10am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Early (thru 4/19/2026)",
+              "value": "$375"
+            },
+            {
+              "label": "Standard",
+              "value": "$420 / team"
+            }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            {
+              "label": "Players / team",
+              "value": "8"
+            },
+            {
+              "label": "Scoring",
+              "value": "Rally"
+            },
+            {
+              "label": "Format",
+              "value": "Pool + playoffs"
             }
           ]
         }
@@ -249,1160 +398,6 @@
       ]
     },
     {
-      "id": "fvbl-power-doubles-jun-2026",
-      "source": "fvbl",
-      "sourceUrl": "https://www.facebook.com/events/836582889465761/",
-      "name": "Power Doubles W & M",
-      "startDate": "2026-06-27",
-      "location": {
-        "venue": "McGregor Field",
-        "city": "Newark",
-        "state": "CA"
-      },
-      "divisions": [
-        "Upper Women",
-        "Lower Women",
-        "Upper Men",
-        "Lower Men"
-      ],
-      "registrationUrl": "http://bit.ly/fvbl-2s-mw-rsvp-2",
-      "format": "2s",
-      "surface": "grass",
-      "feeUSD": 60,
-      "registrationDeadline": "2026-06-21",
-      "description": "Power Doubles (Women's and Men's) — a Saturday grass doubles tournament hosted by FVBL (@fvbleague), the long-running Bay Area grass series that runs out of the Newark/Fremont area. Players sign up through the bit.ly RSVP form, which feeds directly to the organizers — that's the link to use, not the Facebook event. Format is standard FVBL doubles: shorter (2s) court, women's net height for the W division and men's height for M, pool play into a playoff bracket, one timeout per set, 5-minute warmups, and the usual FVBL hand rules (no open-hand passing on serve receive or rallies, set-overs only on 2nd/3rd touch and must be square, blocks don't count as a touch). Teams BYO whistle for reffing and BYO ball, shade, food, and water. Carpooling encouraged."
-    },
-    {
-      "id": "tlsports-grass-rc-doubles-jul-2026",
-      "source": "tlsports",
-      "sourceUrl": "https://www.tl-sports.com/tournaments",
-      "name": "Grass Reverse Coed Doubles",
-      "startDate": "2026-07-11",
-      "location": {
-        "venue": "Washington Park",
-        "city": "Sunnyvale",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed AA",
-        "Coed A",
-        "Coed BB",
-        "Coed B"
-      ],
-      "format": "2s",
-      "surface": "grass",
-      "feeUSD": 80,
-      "registrationDeadline": "2026-07-04",
-      "registrationUrl": "https://volleyballlife.com/event/38606",
-      "description": "Grass Reverse Coed Doubles from The League Sports — Saturday July 11, 2026, 9am–6pm (check-in 8:15am) at Washington Park, 840 W. Washington Ave, Sunnyvale, CA. Cost is $80/team, with an early-bird $70/team until 5/16/2026. Levels: AA (highly competitive), A (Advanced), BB (Intermediate), B (Proficient) — no jump serves permitted in B. Women's net height (men attack from behind the 10ft line). Maximum 2 players per team (no subs), rally scoring, pool play + playoffs, limited spots per division. Refund policy: full refund 1+ week prior, 20% within a week, no refund within 48 hours or for no-shows. Free-agent inquiries: info@tl-sports.com / 408-479-4403.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "info@tl-sports.com",
-              "phone": "408-479-4403"
-            }
-          ]
-        },
-        {
-          "heading": "Ratings",
-          "type": "ratings",
-          "axisLow": "Beginner",
-          "axisHigh": "Open",
-          "items": [
-            {
-              "label": "B",
-              "value": "Proficient"
-            },
-            {
-              "label": "BB",
-              "value": "Intermediate"
-            },
-            {
-              "label": "A",
-              "value": "Advanced"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:15am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Early (thru 5/16/2026)",
-              "value": "$70 / team"
-            },
-            {
-              "label": "Standard",
-              "value": "$80 / team"
-            }
-          ]
-        },
-        {
-          "heading": "Format",
-          "items": [
-            {
-              "label": "Players / team",
-              "value": "2"
-            },
-            {
-              "label": "Scoring",
-              "value": "Rally"
-            },
-            {
-              "label": "Format",
-              "value": "Pool + playoffs"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fvbl-summer-doubles-rc-jul-2026",
-      "source": "fvbl",
-      "sourceUrl": "https://www.facebook.com/events/1255850129994276/",
-      "name": "Summer Doubles Rev Co",
-      "startDate": "2026-07-18",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [
-        "Reverse Coed"
-      ],
-      "registrationUrl": "http://bit.ly/fvbl-2s-rc-rsvp-2",
-      "format": "2s",
-      "surface": "grass",
-      "description": "Summer Doubles Reverse Coed — a Saturday grass 2s tournament from FVBL (@fvbleague), running out of the Newark/Fremont grass scene in the Bay Area. Sign up via the bit.ly form; that's the official RSVP, not the FB event. Reverse Coed means the women drive the offense and the net is at women's height: men can only attack from behind the 10-foot line, and if a man contacts the ball above net height at or in front of the line it must travel upward (no driving it down). Men cannot block — any blocking contact above the net is an automatic side out. Women have no front-row restrictions. Standard FVBL 2s rules apply: shorter court, no open-hand passing on serve receive or rallies, set-overs square only, one timeout per set, BYO whistle for reffing and BYO ball/shade/water."
-    },
-    {
-      "id": "fvbl-summer-doubles-mw-jul-2026",
-      "source": "fvbl",
-      "sourceUrl": "https://www.facebook.com/events/26221887760766283/",
-      "name": "Summer Doubles W & M",
-      "startDate": "2026-07-25",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [
-        "Women's",
-        "Men's"
-      ],
-      "registrationUrl": "http://bit.ly/fvbl-2s-mw-rsvp-3",
-      "format": "2s",
-      "surface": "grass",
-      "description": "Summer Doubles (Women's and Men's) — a Saturday grass doubles event hosted by FVBL (@fvbleague) in the Newark/Fremont area of the Bay Area. RSVP through the bit.ly link; that form is the actual sign-up, the Facebook event is just the announcement. Same FVBL doubles format as the rest of the 2s slate: women's bracket plays at women's net height, men's at men's net height, shorter (2s) court, pool play into a playoff bracket. House rules: no open-hand passing on serve receive or rallies (open hand only on hard-driven hits), set-overs allowed only on 2nd/3rd touch and must be square, blocks don't count as a touch and can't redirect, one timeout per set, 5-minute warmups, late teams lose a point after 10 minutes and forfeit at 20. BYO whistle, ball, food, shade, and water; teams ref each other."
-    },
-    {
-      "id": "fvbl-trilogy-triples-aug-2026",
-      "source": "fvbl",
-      "sourceUrl": "https://www.facebook.com/events/1519242606215680/",
-      "name": "Trilogy Triples Coed",
-      "startDate": "2026-08-01",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed"
-      ],
-      "registrationUrl": "http://bit.ly/fvbl-3s-coed-rsvp",
-      "format": "3s",
-      "surface": "grass",
-      "description": "Trilogy Triples Coed — a Saturday coed 3s tournament on grass from FVBL (@fvbleague), the Bay Area grass series based in the Newark/Fremont area. Sign up through the bit.ly RSVP — that form, not the FB event, is what gets you on the team list. Triples plays on the shorter (2s) court at men's net height. Standard FVBL hand rules apply: no open-hand passing on serve receive or rallies (open hand only on hard-driven hits), set-overs allowed only on 2nd/3rd touch and must be square, blocks don't count as a touch, no rotation fault but serve order must be maintained, lets are live, one service attempt. Format is pool play into a playoff bracket with one timeout per set, 5-minute warmups, late penalties after 10 minutes and forfeit at 20. Teams BYO whistle for reffing and BYO ball, shade, food, and water."
-    },
-    {
-      "id": "fvbl-vintage-quads-aug-2026",
-      "source": "fvbl",
-      "sourceUrl": "https://www.facebook.com/events/2157351711336692/",
-      "name": "Vintage Coed Quads",
-      "startDate": "2026-08-08",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed"
-      ],
-      "registrationUrl": "http://bit.ly/fvbl-4s-coed-rsvp",
-      "format": "4s",
-      "surface": "grass",
-      "description": "Vintage Coed Quads — a Saturday coed 4s tournament on grass hosted by FVBL (@fvbleague), running out of the Newark/Fremont grass scene in the Bay Area. RSVP through the bit.ly form; that's the sign-up that actually feeds the organizers, the Facebook event is just the announcement. Quads plays on a full-size 6s court (the only FVBL format that does — 2s and 3s use a shorter court). Standard FVBL house rules: no open-hand passing on serve receive or rallies, set-overs only on 2nd/3rd touch and must be square, blocks don't count as a touch and can't redirect, no rotation fault but serve order is maintained, lets are live with one service attempt. Pool play into playoffs, one timeout per set, 5-minute warmups, late teams penalized at 10 minutes and forfeit at 20. Teams BYO whistle for reffing, plus BYO ball, food, shade, and water."
-    },
-    {
-      "id": "tlsports-grass-tbd-aug-2026",
-      "source": "tlsports",
-      "sourceUrl": "https://www.tl-sports.com/tournaments",
-      "name": "Grass Tournament — Format TBD",
-      "startDate": "2026-08-15",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [],
-      "surface": "grass",
-      "description": "Mid-summer grass tournament from The League Sports — format is still TBD as of the current tournaments page. TLS runs grass events from May through October and rotates between Reverse Coed Quads, Triples, and Doubles depending on the date; they note they're \"always open to new formats, if you have any suggestions, let us know.\" No registration date, gym, or entry fee posted yet — check tl-sports.com/tournaments as the date approaches, or reach out to info@tl-sports.com / 408-479-4403.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "info@tl-sports.com",
-              "phone": "408-479-4403"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tlsports-grass-tbd-sep-2026",
-      "source": "tlsports",
-      "sourceUrl": "https://www.tl-sports.com/tournaments",
-      "name": "Grass Tournament — Format TBD",
-      "startDate": "2026-09-12",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [],
-      "surface": "grass",
-      "description": "Late-summer grass tournament from The League Sports — format is still TBD as of the current tournaments page. One of the last stops on the TLS outdoor season (May–October) before VolleyBOO closes things out in October. TLS rotates between Reverse Coed Quads, Triples, and Doubles for these grass dates and welcomes format suggestions from the player community. No registration date, gym, or entry fee posted yet — watch tl-sports.com/tournaments or contact info@tl-sports.com / 408-479-4403 for updates.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "info@tl-sports.com",
-              "phone": "408-479-4403"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tlsports-volleyboo-2026",
-      "source": "tlsports",
-      "sourceUrl": "https://www.tl-sports.com/tournaments",
-      "name": "11th Annual VolleyBOO Reverse Coed Quads",
-      "startDate": "2026-10-10",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [
-        "Reverse Coed"
-      ],
-      "format": "4s",
-      "surface": "grass",
-      "description": "The 11th annual VolleyBOO — reverse coed costume quads on grass and, in TLS's own words, \"our biggest tournament every year!\" Registration opens August 30 at 10:00 AM. Every player gets an event t-shirt; cash prizes go to the best team costume and to all division winners, plus additional swag for division winners. From The League Sports: \"Thank you for the awesome turn out in 2025, the costumes as always are impressive especially those playing on the court in them! Save the date for the 11th Annual VolleyBOO — October 10th 2026!!!\" Expect a packed field and serious commitment to costumes that somehow still let you pass a ball. Questions: info@tl-sports.com / 408-479-4403.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "info@tl-sports.com",
-              "phone": "408-479-4403"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tlsports-mw-6s-nov-2026",
-      "source": "tlsports",
-      "sourceUrl": "https://www.tl-sports.com/tournaments",
-      "name": "Men's & Women's Indoor 6's",
-      "startDate": "2026-11-14",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [
-        "Men's",
-        "Women's"
-      ],
-      "format": "6s",
-      "surface": "indoor",
-      "description": "Indoor traditional 6's in separate Men's and Women's divisions — the late-season counterpart to the February event of the same format. Registration opens September 13 at 10:00 AM via the TLS VolleyballLife portal. Hosted by The League Sports, who run indoor volleyball year-round in the Bay Area and use these gendered 6's dates to round out a calendar that's otherwise heavy on reverse-coed formats. Gym, entry fee, and division levels (A/BB/B etc.) aren't posted on the tournaments page yet. Contact info@tl-sports.com or 408-479-4403 with questions.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "info@tl-sports.com",
-              "phone": "408-479-4403"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tlsports-ugly-sweater-2026",
-      "source": "tlsports",
-      "sourceUrl": "https://www.tl-sports.com/tournaments",
-      "name": "8th Annual Ugly Sweater Power Rev Co",
-      "startDate": "2026-12-05",
-      "location": {
-        "city": "Bay Area",
-        "state": "CA"
-      },
-      "divisions": [
-        "Reverse Coed"
-      ],
-      "format": "6s",
-      "surface": "indoor",
-      "description": "The 8th annual Ugly Sweater tournament — Indoor Power Reverse Coed 6's, the TLS holiday tradition. From The League Sports: \"Reverse coed power 6's is our annual holiday tournament! Each year we say thanks to all the players who have supported TLS by showering teams with gifts and holiday goodies!\" Registration opens October 4 at 10:00 AM. Power format means men's net height with men and women on opposite sides from a traditional coed setup. Bring the worst sweater you can still pass in — this one's about closing out the year with the TLS community. Gym, entry fee, and division levels aren't posted on the tournaments page yet. Questions: info@tl-sports.com / 408-479-4403.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "info@tl-sports.com",
-              "phone": "408-479-4403"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "sfdynasty-power-coed-2026-03",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "Power Coed '26",
-      "startDate": "2026-03-29",
-      "location": {
-        "venue": "SF Elite Volleyball Club",
-        "city": "South San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "BB — open to all levels"
-      ],
-      "registrationUrl": "https://volleyballlife.com/event/35106",
-      "registrationDeadline": "2026-02-21",
-      "feeUSD": 420,
-      "format": "6s",
-      "surface": "indoor",
-      "description": "Sunday Mar 29, 2026 · 9am–6pm (check-in 8:15am) at SF Elite Volleyball Club, 1416 San Mateo Ave, South San Francisco. Level: BB — open to all levels. Cost: $420/team, early bird $375 until 2/21/2026. Men's height net (7'11\"). 8 players max, 2 females on court at all times, no Girl-touch rule. Subbing: girl-for-girl, guy-for-guy, no 3 guys in the front row at any time. Rally scoring. Pool play + single-elimination playoffs — all teams advance, brackets seeded by pool results. Capped at 12 teams. Min 3 confirmed players to reserve. No refunds after March 7, 2026. No refunds for no-shows. Free agent inquiries: sfdynastyvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "sfdynastyvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:15am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Early (thru 2/21/2026)",
-              "value": "$375"
-            },
-            {
-              "label": "Standard",
-              "value": "$420 / team"
-            }
-          ]
-        },
-        {
-          "heading": "Format",
-          "items": [
-            {
-              "label": "Team cap",
-              "value": "12"
-            },
-            {
-              "label": "Players / team",
-              "value": "8"
-            },
-            {
-              "label": "Scoring",
-              "value": "Rally"
-            },
-            {
-              "label": "Format",
-              "value": "Pool + playoffs"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "sfdynasty-mens-6ft-2026-05",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "Men's 6 FT and Under '26",
-      "startDate": "2026-05-31",
-      "location": {
-        "venue": "SF Elite Volleyball Club",
-        "city": "South San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "BB — open to all levels"
-      ],
-      "registrationUrl": "https://volleyballlife.com/event/36917",
-      "registrationDeadline": "2026-04-19",
-      "feeUSD": 420,
-      "format": "6s",
-      "surface": "indoor",
-      "notes": "Height-restricted: 6 ft and under",
-      "description": "Sunday May 31, 2026 · 9am–6pm (check-in 8:10am) at SF Elite Volleyball Club, 1416 San Mateo Ave, South San Francisco. Level: BB — open to all levels. Cost: $420/team of 8, early bird $375 until 4/19/2026. Men's height net (7'11 5/8\"). 8 players max per team, uniforms strongly recommended (especially with a libero). Rally scoring, pool play + single-elimination playoffs. Limited spots — all teams make playoffs, brackets seeded by pool play. Prizes 1st & 2nd in all divisions. No refunds after May 16, 2026. No refunds for no-shows. Free agent inquiries: sfdynastyvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "sfdynastyvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:10am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Early (thru 4/19/2026)",
-              "value": "$375"
-            },
-            {
-              "label": "Standard",
-              "value": "$420 / team"
-            }
-          ]
-        },
-        {
-          "heading": "Format",
-          "items": [
-            {
-              "label": "Players / team",
-              "value": "8"
-            },
-            {
-              "label": "Scoring",
-              "value": "Rally"
-            },
-            {
-              "label": "Format",
-              "value": "Pool + playoffs"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "sfdynasty-womens-2026-06",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "Women's Indoor 6s '26",
-      "startDate": "2026-06-14",
-      "location": {
-        "venue": "SF Elite Volleyball Club",
-        "city": "South San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "BB — open to all levels"
-      ],
-      "registrationUrl": "https://volleyballlife.com/event/37603",
-      "registrationDeadline": "2026-05-01",
-      "feeUSD": 420,
-      "format": "6s",
-      "surface": "indoor",
-      "description": "Sunday Jun 14, 2026 · 9am–6pm (check-in 8:10am) at SF Elite Volleyball Club, 1416 San Mateo Ave, South San Francisco. Level: BB — open to all levels. Cost: $420/team of 8, early bird $375 until 5/1/2026. Women's height net (7'4\"). 8 players max per team, uniforms strongly recommended (especially with a libero). Rally scoring, pool play + single-elimination playoffs. All teams make playoffs — brackets seeded by pool play. Prizes 1st & 2nd in all divisions. No refunds after May 31, 2026. No refunds for no-shows. Free agent inquiries: sfdynastyvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "sfdynastyvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:10am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Early (thru 5/1/2026)",
-              "value": "$375"
-            },
-            {
-              "label": "Standard",
-              "value": "$420 / team"
-            }
-          ]
-        },
-        {
-          "heading": "Format",
-          "items": [
-            {
-              "label": "Players / team",
-              "value": "8"
-            },
-            {
-              "label": "Scoring",
-              "value": "Rally"
-            },
-            {
-              "label": "Format",
-              "value": "Pool + playoffs"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "sfdynasty-9man-mini-2026",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "San Francisco 9 Man Mini",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-28",
-      "location": {
-        "venue": "SF Elite Volleyball Club",
-        "city": "South San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "Men's Open",
-        "Women's Open"
-      ],
-      "format": "9s",
-      "surface": "indoor",
-      "registrationUrl": "https://volleyballlife.com/event/35020",
-      "registrationDeadline": "2026-06-12",
-      "description": "Saturday–Sunday, June 27–28, 2026 — Saturday 8:00am (check-in 7:00am), Sunday 8:00am — at SF Elite Volleyball Club, 1416 San Mateo Ave / 415 E. Grand Ave, South San Francisco, CA 94080. Cost: Men's $700 early-bird / $800 regular, Women's $500 early-bird / $600 regular (early-bird ends 5/1/2026). Format: 9-player rule with 2/3 of the players on the court of Asian descent and 1/3 non-Asian. Roster cap: ~18 players for men's, ~15 for women's. Rally scoring; cash prizes for the winner of each division. Priority goes to teams that played in the NY nationals. Tournament is capped at 16 women's teams and 20 men's teams. Refund policy: full payment required to reserve a spot, no refunds after June 5, 2026, no refunds for no-shows. Free-agent inquiries: sfdynastyvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "sfdynastyvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "7:00am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Standard",
-              "value": "$700"
-            }
-          ]
-        },
-        {
-          "heading": "Format",
-          "items": [
-            {
-              "label": "Scoring",
-              "value": "Rally"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "sfdynasty-power-rc-2026-08",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "Power Reverse COED",
-      "startDate": "2026-08-02",
-      "location": {
-        "city": "San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "Reverse Coed"
-      ],
-      "format": "6s",
-      "surface": "indoor"
-    },
-    {
-      "id": "sfdynasty-40-and-over-2026-09",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "40 and Over COED",
-      "startDate": "2026-09-12",
-      "location": {
-        "city": "San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed",
-        "40+"
-      ],
-      "format": "6s",
-      "surface": "indoor"
-    },
-    {
-      "id": "sfdynasty-mens-2026-10",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "Men's",
-      "startDate": "2026-10-18",
-      "location": {
-        "city": "San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "Men's"
-      ],
-      "format": "6s",
-      "surface": "indoor"
-    },
-    {
-      "id": "sfdynasty-winter-wonderland-2026-12",
-      "source": "sfdynasty",
-      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
-      "name": "Winter Wonderland Power COED",
-      "startDate": "2026-12-19",
-      "location": {
-        "city": "San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed"
-      ],
-      "format": "6s",
-      "surface": "indoor"
-    },
-    {
-      "id": "noattitudes-summer-solstice-2026",
-      "source": "noattitudes",
-      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
-      "name": "Summer Solstice Spiketacular",
-      "startDate": "2026-06-20",
-      "location": {
-        "venue": "Main Beach",
-        "city": "Santa Cruz",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed Novice",
-        "Coed Intermediate",
-        "Coed Advanced"
-      ],
-      "format": "4s",
-      "surface": "sand",
-      "notes": "PRIDE THEME",
-      "description": "Pride-themed monthly tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Santa Cruz Beach Boardwalk). In the spirit of Pride Month, the league is bringing extra color, energy, and love to the sand — players are encouraged to come in their brightest rainbow fits, neon, wild patterns, glitter, or pride gear to make Main Beach the most colorful spot in town. Divisions: Coed Novice, Coed Intermediate, Women's, Men's, Teen's, and Coed 4v4 (4v4 requires at least two women on the court; a block doesn't count as a touch). Novice is for newer players still learning the rules (3 touches required, serve the better player); Intermediate is for experienced rec players who bump/set/spike consistently. Registration runs through the Beach Volleyball app only: $70/team early, $80/team late (rate jumps two weeks out). Saturday play with 8:30 AM check-in, 9:00 AM first serve, wrapping around 3:30 PM — pool play to 21 or 25, win by 2, then playoffs, self-officiated with non-playing teams reffing. Refunds with 72 hrs notice. Contact: noattitudesbvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "noattitudesbvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:30am"
-            },
-            {
-              "label": "First serve",
-              "value": "9:00am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Late",
-              "value": "$80 / team"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noattitudes-stars-stripes-2026",
-      "source": "noattitudes",
-      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
-      "name": "Stars, Stripes & Spikes",
-      "startDate": "2026-07-18",
-      "location": {
-        "venue": "Main Beach",
-        "city": "Santa Cruz",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed Novice",
-        "Coed Intermediate",
-        "Coed Advanced"
-      ],
-      "format": "4s",
-      "surface": "sand",
-      "notes": "HAWAII THEME",
-      "description": "Hawaii-themed July tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk). The league is bringing island vibes to the sand — floral shirts, coconut bras, leis, loud prints and tropical sets are encouraged for a full day of beach volleyball with sunshine, music, community, and aloha spirit. Divisions: Coed Intermediate, Coed Novice, Coed 4v4 (2 men / 2 women, with at least two women on the court; block doesn't count as a touch), Unrated Men's, Unrated Women's, and Teens (ages 13–16). Novice is for players still developing rules and skills (3 touches required, serve the better player); Intermediate expects consistent bump/set/spike and an understanding of positioning; Unrated means no CBVA rating. Registration is through the Beach Volleyball app only — search 'No Attitudes' and enroll: $70/team early, $80/team late (rate jumps two weeks before the tournament). Saturday play with 8:30 AM check-in, 9:00 AM start, wrapping ~3:30 PM. Pool play to 21/25 win-by-2 then playoffs, self-officiated. Refund with 72 hrs notice. Partners changeable up to 2 hrs before start. Contact: noattitudesbvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "noattitudesbvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:30am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Late",
-              "value": "$80 / team"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noattitudes-endless-summer-2026",
-      "source": "noattitudes",
-      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
-      "name": "Endless Summer Classic",
-      "startDate": "2026-08-15",
-      "location": {
-        "venue": "Main Beach",
-        "city": "Santa Cruz",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed Novice",
-        "Coed Intermediate",
-        "Coed Advanced"
-      ],
-      "format": "4s",
-      "surface": "sand",
-      "notes": "70's THEME",
-      "description": "70's-themed August tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk). The league is throwing it back to the 70's for one groovy day on the sand — players are encouraged to come in retro beach vibes, disco energy, vintage sunnies, tube socks, bell bottoms, short shorts, funky prints, and bucket hats. Surfy, disco, hippie, or 70's beach-movie looks all welcome. Divisions: Coed Novice, Coed Intermediate, Women's, Men's, Teen's, and Coed 4v4 (at least two women on the court at all times; block doesn't count as a touch). Novice is for newer players still developing rules and skills (3 touches required, serve the better player); Intermediate expects consistent bump/set/spike and court awareness. Registration runs through the Beach Volleyball app only: $70/team early, $80/team late (rate jumps two weeks out). Saturday format: 8:30 AM check-in, 9:00 AM first serve, wrap ~3:30 PM. Pool play in groups of 4–6 to 21 or 25 (win by 2), then playoffs; self-officiated with non-playing teams reffing. Refunds with 72 hrs notice. Partner swaps allowed up to 2 hrs before start. Contact: noattitudesbvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "noattitudesbvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:30am"
-            },
-            {
-              "label": "First serve",
-              "value": "9:00am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Late",
-              "value": "$80 / team"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noattitudes-serve-off-2026",
-      "source": "noattitudes",
-      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
-      "name": "Summer Serve Off",
-      "startDate": "2026-09-19",
-      "location": {
-        "venue": "Main Beach",
-        "city": "Santa Cruz",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed Novice",
-        "Coed Intermediate",
-        "Coed Advanced"
-      ],
-      "format": "4s",
-      "surface": "sand",
-      "notes": "90's POP THEME",
-      "description": "90's pop-themed September tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk). Expect 90's pop, hip hop, and nostalgia on the sound system all day — players are encouraged to dress to impress in windbreakers, neon, overalls, crop tops, jorts, bucket hats, chunky sunglasses, boy band energy, or full Spice Girls chaos. Divisions: Coed Intermediate, Coed Novice, Men's Advanced (1 player rated), Women's Advanced (1 player rated), and Teens. Novice is for newer players still developing rules and skills; Intermediate expects experienced rec play with consistent bump/set/spike; the Advanced gendered doubles require at least one CBVA-rated player per team (seeding by combined CBVA rating, points, and ranking). Registration is through the Beach Volleyball app only — search 'No Attitudes', $70/team early, $80/team late (rate jumps two weeks out). Saturday play, 8:30 AM check-in, 9:00 AM first serve, wrap ~3:30 PM. Pool play to 21/25 win-by-2 then playoffs, self-officiated with non-playing teams reffing; tournament staff have final say. Refund with 72 hrs notice. Contact: noattitudesbvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "noattitudesbvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:30am"
-            },
-            {
-              "label": "First serve",
-              "value": "9:00am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Late",
-              "value": "$80 / team"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noattitudes-halloween-2026",
-      "source": "noattitudes",
-      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
-      "name": "Spiketacular Halloween Open",
-      "startDate": "2026-10-17",
-      "location": {
-        "venue": "Main Beach",
-        "city": "Santa Cruz",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed Novice",
-        "Coed Intermediate",
-        "Coed Advanced"
-      ],
-      "format": "4s",
-      "surface": "sand",
-      "description": "Halloween-themed October tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Santa Cruz Beach Boardwalk). Costumes, competition, and candy on the court — players are encouraged to come in costume and bring the spooky-season energy. Divisions: Coed Novice, Coed Intermediate, Women's, Men's, Teen's, and Coed 4v4 (at least two women on the court at all times; block doesn't count as a touch). Novice is for newer players still developing rules and skills (3 touches required, serve the better player); Intermediate is for experienced rec players who bump/set/spike consistently and understand positioning. Registration runs through the Beach Volleyball app only — search 'No Attitudes': $70/team early, $80/team late (rate jumps two weeks out). Saturday format with 8:30 AM check-in, 9:00 AM first serve, wrap around 3:30 PM. Pool play in groups of 4–6 to 21 or 25 (win by 2), then playoffs; self-officiated with non-playing teams assigned to ref. Refunds with 72 hrs notice. Partners can be swapped up to 2 hours before start. Bring your own ball, pump, water, snacks, sunscreen — there's no formal lunch break. Contact: noattitudesbvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "noattitudesbvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "8:30am"
-            },
-            {
-              "label": "First serve",
-              "value": "9:00am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Late",
-              "value": "$80 / team"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "noattitudes-thanks-for-digs-2026",
-      "source": "noattitudes",
-      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
-      "name": "Thanks for the Digs Classic",
-      "startDate": "2026-11-14",
-      "location": {
-        "venue": "Main Beach",
-        "city": "Santa Cruz",
-        "state": "CA"
-      },
-      "divisions": [
-        "Coed Novice",
-        "Coed Intermediate",
-        "Coed Advanced"
-      ],
-      "format": "4s",
-      "surface": "sand",
-      "notes": "HOLIDAY COSTUME THEME",
-      "description": "Holiday-costume-themed November finale from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk) — the final tournament of 2026 and a celebration of the league's first full year. Expect a full-on holiday beach party with volleyball, music, costumes, and nonstop vibes; players are encouraged to come in ugly sweaters, turkey hats, Santa gear, elf outfits, reindeer onesies, or whatever wild holiday energy they want. Divisions: Coed Advanced, Coed Intermediate, Coed Novice, Women's Unrated, Men's Unrated, and Teens. Advanced/Rated coed requires at least one CBVA-rated player (seeding by combined CBVA rating, points, and ranking); Intermediate expects experienced rec play with consistent bump/set/spike; Novice is for newer players still developing rules and skills; Unrated = no CBVA rating. Registration through the Beach Volleyball app only: $70/team early, $80/team late (rate jumps two weeks out). November Saturday format runs later — 9:30 AM check-in, 10:00 AM first serve, wrap ~3:30 PM. Pool play to 21/25 win-by-2 then playoffs, self-officiated with non-playing teams reffing. Refund with 72 hrs notice. Contact: noattitudesbvb@gmail.com.",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Organizer",
-              "email": "noattitudesbvb@gmail.com"
-            }
-          ]
-        },
-        {
-          "heading": "Schedule",
-          "items": [
-            {
-              "label": "Check-in",
-              "value": "9:30am"
-            },
-            {
-              "label": "First serve",
-              "value": "10:00am"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Late",
-              "value": "$80 / team"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nagva-sf-red-white-blue-ball-xv-2026",
-      "source": "nagva",
-      "sourceUrl": "https://www.nagva.org/tournaments-1/san-francisco-red%2C-white-%26-blue-ball-xxv--",
-      "name": "San Francisco Red, White & Blue Ball XV",
-      "startDate": "2026-07-11",
-      "endDate": "2026-07-12",
-      "location": {
-        "venue": "SF Elite Annex",
-        "city": "South San Francisco",
-        "state": "CA"
-      },
-      "divisions": [
-        "A1",
-        "BB",
-        "B",
-        "Women's"
-      ],
-      "registrationDeadline": "2026-06-27",
-      "registrationUrl": "https://www.nagva.org/tournaments-1/san-francisco-red%2C-white-%26-blue-ball-xxv--",
-      "format": "6s",
-      "surface": "indoor",
-      "notes": "15th annual NAGVA Bay Area tournament. Director: Jonathan Sloan. Payment deadlines May 30 / June 27. Two facilities: SF Elite Annex (415 E Grand Ave) and Elite Sports Center (1422 San Mateo Ave), South SF. Registration party 7/10 at 2200A Market St, SF. As of late May: B & BB divisions full — waitlist by payment date.",
-      "description": "The San Francisco Red, White & Blue Ball XV is NAGVA's mid-summer Bay Area stop, running Saturday-Sunday July 11-12, 2026 and hosted by Balls of Furry Volleyball (ballsoffurryvolleyball.org/red-white-blue-ball). Match play happens at two South San Francisco facilities: SF Elite Annex (415 E Grand Ave, South San Francisco, CA 94080) and Elite Sports Center (1422 San Mateo Ave, South San Francisco, CA 94080). On-site team registration is Friday July 10 at 10:00 AM at 2200A Market St in San Francisco's Castro. The tournament is capped at 82 teams across four NAGVA skill divisions: A1 (7), BB (27), B (34), and Women's (14) — the BB, B, and Women's pools all filled out months in advance, with A1 still taking entries at last update. Saturday is pool play (A1/BB and Women's in the AM, B in the PM); no team is eliminated Saturday and all bracket play runs Sunday. Team fees are tiered at $525 / $600 with deadlines May 30 and June 27, 2026, plus a $75 additional-player fee; waitlist priority date is June 1. Pay by Venmo (@talljonnysf), personal check, or cashier's check — teams are confirmed in the order their payment is received. Tournament Director: Jonathan Sloan; Registrar: Richard Sucre (info@nagva.org). Per NAGVA, teams without a certified ref/scorekeeper pay match fees for every match they are assigned to work.",
-      "feeUSD": 600,
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Richard Sucre",
-              "email": "info@nagva.org"
-            }
-          ]
-        },
-        {
-          "heading": "Ratings",
-          "type": "ratings",
-          "axisLow": "Beginner",
-          "axisHigh": "Open",
-          "items": [
-            {
-              "label": "B",
-              "value": "34"
-            },
-            {
-              "label": "BB",
-              "value": "27"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Standard",
-              "value": "$525"
-            }
-          ]
-        },
-        {
-          "heading": "Format",
-          "items": [
-            {
-              "label": "Team cap",
-              "value": "82"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nagva-sactown-throwdown-2026",
-      "source": "nagva",
-      "sourceUrl": "https://www.nagva.org/tournaments-1/2026-sactown-throwdown",
-      "name": "2026 Sactown Throwdown",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-22",
-      "location": {
-        "venue": "Capital Sports Center",
-        "city": "McClellan Park",
-        "state": "CA"
-      },
-      "divisions": [
-        "B",
-        "BB",
-        "BB3",
-        "Legends B",
-        "Women's"
-      ],
-      "registrationDeadline": "2026-11-07",
-      "registrationUrl": "https://www.nagva.org/tournaments-1/2026-sactown-throwdown",
-      "format": "6s",
-      "surface": "indoor",
-      "notes": "NAGVA Sacramento-area tournament. Director: Gordon Li. Registrar: Karl Vinge. Payment deadlines July 25 / Sep 26 / Nov 7. Venmo @Karl-Vinge-1 with team name + city + division in memo. Refs/scorekeepers required — pay in advance via Venmo if your team can't supply one.",
-      "description": "The 2026 Sactown Throwdown is NAGVA's late-November Sacramento-area tournament, played Saturday-Sunday November 21-22, 2026 at Capital Sports Center, 5209 Luce Ave, McClellan Park, CA 95652 (a converted hangar facility on the former McClellan AFB just north of downtown Sacramento). The event is capped at 72 teams across five NAGVA skill divisions: B (28), BB (24), BB3 (24-team three-player BB sixes variant, 6 teams), Legends B (8), and Women's (6) — giving lower-intermediate and intermediate players, plus Legends-eligible (older-player) B teams, the bulk of the field. Entry fees are tiered at $500 / $550 / $600 across deadlines of July 25, September 26, and November 7, 2026, with a $60 additional-player fee; the waitlist priority date is September 26 and teams are confirmed in payment order. Payment is Venmo only, to @Karl-Vinge-1 (https://venmo.com/u/Karl-Vinge-1) — checks are not accepted; include team name, city, and division in the memo. Per NAGVA's standard work-team rule restated on the page: if your team does NOT bring its own certified ref/scorekeeper, you must pay for refs and scorekeepers on every match your team is assigned as the work team — teams are encouraged to prepay via Venmo or have a player get certified at nagva.org to avoid the fee. Tournament Director: Gordon Li; Registrar: Karl Vinge (info@nagva.org).",
-      "details": [
-        {
-          "heading": "Contact",
-          "type": "contacts",
-          "items": [
-            {
-              "label": "Karl Vinge",
-              "email": "info@nagva.org"
-            }
-          ]
-        },
-        {
-          "heading": "Ratings",
-          "type": "ratings",
-          "axisLow": "Beginner",
-          "axisHigh": "Open",
-          "items": [
-            {
-              "label": "B",
-              "value": "28"
-            },
-            {
-              "label": "BB",
-              "value": "24"
-            }
-          ]
-        },
-        {
-          "heading": "Pricing",
-          "items": [
-            {
-              "label": "Standard",
-              "value": "$500"
-            }
-          ]
-        },
-        {
-          "heading": "Format",
-          "items": [
-            {
-              "label": "Team cap",
-              "value": "72"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "volleynation-marina-green-open-2026",
       "source": "volleynation",
       "sourceUrl": "https://volleyballlife.com/event/38863",
@@ -1507,6 +502,218 @@
       ]
     },
     {
+      "id": "sfdynasty-womens-2026-06",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "Women's Indoor 6s '26",
+      "startDate": "2026-06-14",
+      "location": {
+        "venue": "SF Elite Volleyball Club",
+        "city": "South San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "BB — open to all levels"
+      ],
+      "registrationUrl": "https://volleyballlife.com/event/37603",
+      "registrationDeadline": "2026-05-01",
+      "feeUSD": 420,
+      "format": "6s",
+      "surface": "indoor",
+      "description": "Sunday Jun 14, 2026 · 9am–6pm (check-in 8:10am) at SF Elite Volleyball Club, 1416 San Mateo Ave, South San Francisco. Level: BB — open to all levels. Cost: $420/team of 8, early bird $375 until 5/1/2026. Women's height net (7'4\"). 8 players max per team, uniforms strongly recommended (especially with a libero). Rally scoring, pool play + single-elimination playoffs. All teams make playoffs — brackets seeded by pool play. Prizes 1st & 2nd in all divisions. No refunds after May 31, 2026. No refunds for no-shows. Free agent inquiries: sfdynastyvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "sfdynastyvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:10am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Early (thru 5/1/2026)",
+              "value": "$375"
+            },
+            {
+              "label": "Standard",
+              "value": "$420 / team"
+            }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            {
+              "label": "Players / team",
+              "value": "8"
+            },
+            {
+              "label": "Scoring",
+              "value": "Rally"
+            },
+            {
+              "label": "Format",
+              "value": "Pool + playoffs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noattitudes-summer-solstice-2026",
+      "source": "noattitudes",
+      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
+      "name": "Summer Solstice Spiketacular",
+      "startDate": "2026-06-20",
+      "location": {
+        "venue": "Main Beach",
+        "city": "Santa Cruz",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed Novice",
+        "Coed Intermediate",
+        "Coed Advanced"
+      ],
+      "format": "4s",
+      "surface": "sand",
+      "notes": "PRIDE THEME",
+      "description": "Pride-themed monthly tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Santa Cruz Beach Boardwalk). In the spirit of Pride Month, the league is bringing extra color, energy, and love to the sand — players are encouraged to come in their brightest rainbow fits, neon, wild patterns, glitter, or pride gear to make Main Beach the most colorful spot in town. Divisions: Coed Novice, Coed Intermediate, Women's, Men's, Teen's, and Coed 4v4 (4v4 requires at least two women on the court; a block doesn't count as a touch). Novice is for newer players still learning the rules (3 touches required, serve the better player); Intermediate is for experienced rec players who bump/set/spike consistently. Registration runs through the Beach Volleyball app only: $70/team early, $80/team late (rate jumps two weeks out). Saturday play with 8:30 AM check-in, 9:00 AM first serve, wrapping around 3:30 PM — pool play to 21 or 25, win by 2, then playoffs, self-officiated with non-playing teams reffing. Refunds with 72 hrs notice. Contact: noattitudesbvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "noattitudesbvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:30am"
+            },
+            {
+              "label": "First serve",
+              "value": "9:00am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Late",
+              "value": "$80 / team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fvbl-power-doubles-jun-2026",
+      "source": "fvbl",
+      "sourceUrl": "https://www.facebook.com/events/836582889465761/",
+      "name": "Power Doubles W & M",
+      "startDate": "2026-06-27",
+      "location": {
+        "venue": "McGregor Field",
+        "city": "Newark",
+        "state": "CA"
+      },
+      "divisions": [
+        "Upper Women",
+        "Lower Women",
+        "Upper Men",
+        "Lower Men"
+      ],
+      "registrationUrl": "http://bit.ly/fvbl-2s-mw-rsvp-2",
+      "format": "2s",
+      "surface": "grass",
+      "feeUSD": 60,
+      "registrationDeadline": "2026-06-21",
+      "description": "Power Doubles (Women's and Men's) — a Saturday grass doubles tournament hosted by FVBL (@fvbleague), the long-running Bay Area grass series that runs out of the Newark/Fremont area. Players sign up through the bit.ly RSVP form, which feeds directly to the organizers — that's the link to use, not the Facebook event. Format is standard FVBL doubles: shorter (2s) court, women's net height for the W division and men's height for M, pool play into a playoff bracket, one timeout per set, 5-minute warmups, and the usual FVBL hand rules (no open-hand passing on serve receive or rallies, set-overs only on 2nd/3rd touch and must be square, blocks don't count as a touch). Teams BYO whistle for reffing and BYO ball, shade, food, and water. Carpooling encouraged."
+    },
+    {
+      "id": "sfdynasty-9man-mini-2026",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "San Francisco 9 Man Mini",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-28",
+      "location": {
+        "venue": "SF Elite Volleyball Club",
+        "city": "South San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "Men's Open",
+        "Women's Open"
+      ],
+      "format": "9s",
+      "surface": "indoor",
+      "registrationUrl": "https://volleyballlife.com/event/35020",
+      "registrationDeadline": "2026-06-12",
+      "description": "Saturday–Sunday, June 27–28, 2026 — Saturday 8:00am (check-in 7:00am), Sunday 8:00am — at SF Elite Volleyball Club, 1416 San Mateo Ave / 415 E. Grand Ave, South San Francisco, CA 94080. Cost: Men's $700 early-bird / $800 regular, Women's $500 early-bird / $600 regular (early-bird ends 5/1/2026). Format: 9-player rule with 2/3 of the players on the court of Asian descent and 1/3 non-Asian. Roster cap: ~18 players for men's, ~15 for women's. Rally scoring; cash prizes for the winner of each division. Priority goes to teams that played in the NY nationals. Tournament is capped at 16 women's teams and 20 men's teams. Refund policy: full payment required to reserve a spot, no refunds after June 5, 2026, no refunds for no-shows. Free-agent inquiries: sfdynastyvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "sfdynastyvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "7:00am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Standard",
+              "value": "$700"
+            }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            {
+              "label": "Scoring",
+              "value": "Rally"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "armada-july-3rd-grass-doubles-2026",
       "source": "armada",
       "sourceUrl": "https://volleyballlife.com/event/38438",
@@ -1554,6 +761,799 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tlsports-grass-rc-doubles-jul-2026",
+      "source": "tlsports",
+      "sourceUrl": "https://www.tl-sports.com/tournaments",
+      "name": "Grass Reverse Coed Doubles",
+      "startDate": "2026-07-11",
+      "location": {
+        "venue": "Washington Park",
+        "city": "Sunnyvale",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed AA",
+        "Coed A",
+        "Coed BB",
+        "Coed B"
+      ],
+      "format": "2s",
+      "surface": "grass",
+      "feeUSD": 80,
+      "registrationDeadline": "2026-07-04",
+      "registrationUrl": "https://volleyballlife.com/event/38606",
+      "description": "Grass Reverse Coed Doubles from The League Sports — Saturday July 11, 2026, 9am–6pm (check-in 8:15am) at Washington Park, 840 W. Washington Ave, Sunnyvale, CA. Cost is $80/team, with an early-bird $70/team until 5/16/2026. Levels: AA (highly competitive), A (Advanced), BB (Intermediate), B (Proficient) — no jump serves permitted in B. Women's net height (men attack from behind the 10ft line). Maximum 2 players per team (no subs), rally scoring, pool play + playoffs, limited spots per division. Refund policy: full refund 1+ week prior, 20% within a week, no refund within 48 hours or for no-shows. Free-agent inquiries: info@tl-sports.com / 408-479-4403.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "info@tl-sports.com",
+              "phone": "408-479-4403"
+            }
+          ]
+        },
+        {
+          "heading": "Ratings",
+          "type": "ratings",
+          "axisLow": "Beginner",
+          "axisHigh": "Open",
+          "items": [
+            {
+              "label": "B",
+              "value": "Proficient"
+            },
+            {
+              "label": "BB",
+              "value": "Intermediate"
+            },
+            {
+              "label": "A",
+              "value": "Advanced"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:15am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Early (thru 5/16/2026)",
+              "value": "$70 / team"
+            },
+            {
+              "label": "Standard",
+              "value": "$80 / team"
+            }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            {
+              "label": "Players / team",
+              "value": "2"
+            },
+            {
+              "label": "Scoring",
+              "value": "Rally"
+            },
+            {
+              "label": "Format",
+              "value": "Pool + playoffs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nagva-sf-red-white-blue-ball-xv-2026",
+      "source": "nagva",
+      "sourceUrl": "https://www.nagva.org/tournaments-1/san-francisco-red%2C-white-%26-blue-ball-xxv--",
+      "name": "San Francisco Red, White & Blue Ball XV",
+      "startDate": "2026-07-11",
+      "endDate": "2026-07-12",
+      "location": {
+        "venue": "SF Elite Annex",
+        "city": "South San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "A1",
+        "BB",
+        "B",
+        "Women's"
+      ],
+      "registrationDeadline": "2026-06-27",
+      "registrationUrl": "https://www.nagva.org/tournaments-1/san-francisco-red%2C-white-%26-blue-ball-xxv--",
+      "format": "6s",
+      "surface": "indoor",
+      "notes": "15th annual NAGVA Bay Area tournament. Director: Jonathan Sloan. Payment deadlines May 30 / June 27. Two facilities: SF Elite Annex (415 E Grand Ave) and Elite Sports Center (1422 San Mateo Ave), South SF. Registration party 7/10 at 2200A Market St, SF. As of late May: B & BB divisions full — waitlist by payment date.",
+      "description": "The San Francisco Red, White & Blue Ball XV is NAGVA's mid-summer Bay Area stop, running Saturday-Sunday July 11-12, 2026 and hosted by Balls of Furry Volleyball (ballsoffurryvolleyball.org/red-white-blue-ball). Match play happens at two South San Francisco facilities: SF Elite Annex (415 E Grand Ave, South San Francisco, CA 94080) and Elite Sports Center (1422 San Mateo Ave, South San Francisco, CA 94080). On-site team registration is Friday July 10 at 10:00 AM at 2200A Market St in San Francisco's Castro. The tournament is capped at 82 teams across four NAGVA skill divisions: A1 (7), BB (27), B (34), and Women's (14) — the BB, B, and Women's pools all filled out months in advance, with A1 still taking entries at last update. Saturday is pool play (A1/BB and Women's in the AM, B in the PM); no team is eliminated Saturday and all bracket play runs Sunday. Team fees are tiered at $525 / $600 with deadlines May 30 and June 27, 2026, plus a $75 additional-player fee; waitlist priority date is June 1. Pay by Venmo (@talljonnysf), personal check, or cashier's check — teams are confirmed in the order their payment is received. Tournament Director: Jonathan Sloan; Registrar: Richard Sucre (info@nagva.org). Per NAGVA, teams without a certified ref/scorekeeper pay match fees for every match they are assigned to work.",
+      "feeUSD": 600,
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Richard Sucre",
+              "email": "info@nagva.org"
+            }
+          ]
+        },
+        {
+          "heading": "Ratings",
+          "type": "ratings",
+          "axisLow": "Beginner",
+          "axisHigh": "Open",
+          "items": [
+            {
+              "label": "B",
+              "value": "34"
+            },
+            {
+              "label": "BB",
+              "value": "27"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Standard",
+              "value": "$525"
+            }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            {
+              "label": "Team cap",
+              "value": "82"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fvbl-summer-doubles-rc-jul-2026",
+      "source": "fvbl",
+      "sourceUrl": "https://www.facebook.com/events/1255850129994276/",
+      "name": "Summer Doubles Rev Co",
+      "startDate": "2026-07-18",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [
+        "Reverse Coed"
+      ],
+      "registrationUrl": "http://bit.ly/fvbl-2s-rc-rsvp-2",
+      "format": "2s",
+      "surface": "grass",
+      "description": "Summer Doubles Reverse Coed — a Saturday grass 2s tournament from FVBL (@fvbleague), running out of the Newark/Fremont grass scene in the Bay Area. Sign up via the bit.ly form; that's the official RSVP, not the FB event. Reverse Coed means the women drive the offense and the net is at women's height: men can only attack from behind the 10-foot line, and if a man contacts the ball above net height at or in front of the line it must travel upward (no driving it down). Men cannot block — any blocking contact above the net is an automatic side out. Women have no front-row restrictions. Standard FVBL 2s rules apply: shorter court, no open-hand passing on serve receive or rallies, set-overs square only, one timeout per set, BYO whistle for reffing and BYO ball/shade/water."
+    },
+    {
+      "id": "noattitudes-stars-stripes-2026",
+      "source": "noattitudes",
+      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
+      "name": "Stars, Stripes & Spikes",
+      "startDate": "2026-07-18",
+      "location": {
+        "venue": "Main Beach",
+        "city": "Santa Cruz",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed Novice",
+        "Coed Intermediate",
+        "Coed Advanced"
+      ],
+      "format": "4s",
+      "surface": "sand",
+      "notes": "HAWAII THEME",
+      "description": "Hawaii-themed July tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk). The league is bringing island vibes to the sand — floral shirts, coconut bras, leis, loud prints and tropical sets are encouraged for a full day of beach volleyball with sunshine, music, community, and aloha spirit. Divisions: Coed Intermediate, Coed Novice, Coed 4v4 (2 men / 2 women, with at least two women on the court; block doesn't count as a touch), Unrated Men's, Unrated Women's, and Teens (ages 13–16). Novice is for players still developing rules and skills (3 touches required, serve the better player); Intermediate expects consistent bump/set/spike and an understanding of positioning; Unrated means no CBVA rating. Registration is through the Beach Volleyball app only — search 'No Attitudes' and enroll: $70/team early, $80/team late (rate jumps two weeks before the tournament). Saturday play with 8:30 AM check-in, 9:00 AM start, wrapping ~3:30 PM. Pool play to 21/25 win-by-2 then playoffs, self-officiated. Refund with 72 hrs notice. Partners changeable up to 2 hrs before start. Contact: noattitudesbvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "noattitudesbvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:30am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Late",
+              "value": "$80 / team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fvbl-summer-doubles-mw-jul-2026",
+      "source": "fvbl",
+      "sourceUrl": "https://www.facebook.com/events/26221887760766283/",
+      "name": "Summer Doubles W & M",
+      "startDate": "2026-07-25",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [
+        "Women's",
+        "Men's"
+      ],
+      "registrationUrl": "http://bit.ly/fvbl-2s-mw-rsvp-3",
+      "format": "2s",
+      "surface": "grass",
+      "description": "Summer Doubles (Women's and Men's) — a Saturday grass doubles event hosted by FVBL (@fvbleague) in the Newark/Fremont area of the Bay Area. RSVP through the bit.ly link; that form is the actual sign-up, the Facebook event is just the announcement. Same FVBL doubles format as the rest of the 2s slate: women's bracket plays at women's net height, men's at men's net height, shorter (2s) court, pool play into a playoff bracket. House rules: no open-hand passing on serve receive or rallies (open hand only on hard-driven hits), set-overs allowed only on 2nd/3rd touch and must be square, blocks don't count as a touch and can't redirect, one timeout per set, 5-minute warmups, late teams lose a point after 10 minutes and forfeit at 20. BYO whistle, ball, food, shade, and water; teams ref each other."
+    },
+    {
+      "id": "fvbl-trilogy-triples-aug-2026",
+      "source": "fvbl",
+      "sourceUrl": "https://www.facebook.com/events/1519242606215680/",
+      "name": "Trilogy Triples Coed",
+      "startDate": "2026-08-01",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed"
+      ],
+      "registrationUrl": "http://bit.ly/fvbl-3s-coed-rsvp",
+      "format": "3s",
+      "surface": "grass",
+      "description": "Trilogy Triples Coed — a Saturday coed 3s tournament on grass from FVBL (@fvbleague), the Bay Area grass series based in the Newark/Fremont area. Sign up through the bit.ly RSVP — that form, not the FB event, is what gets you on the team list. Triples plays on the shorter (2s) court at men's net height. Standard FVBL hand rules apply: no open-hand passing on serve receive or rallies (open hand only on hard-driven hits), set-overs allowed only on 2nd/3rd touch and must be square, blocks don't count as a touch, no rotation fault but serve order must be maintained, lets are live, one service attempt. Format is pool play into a playoff bracket with one timeout per set, 5-minute warmups, late penalties after 10 minutes and forfeit at 20. Teams BYO whistle for reffing and BYO ball, shade, food, and water."
+    },
+    {
+      "id": "sfdynasty-power-rc-2026-08",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "Power Reverse COED",
+      "startDate": "2026-08-02",
+      "location": {
+        "city": "San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "Reverse Coed"
+      ],
+      "format": "6s",
+      "surface": "indoor"
+    },
+    {
+      "id": "fvbl-vintage-quads-aug-2026",
+      "source": "fvbl",
+      "sourceUrl": "https://www.facebook.com/events/2157351711336692/",
+      "name": "Vintage Coed Quads",
+      "startDate": "2026-08-08",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed"
+      ],
+      "registrationUrl": "http://bit.ly/fvbl-4s-coed-rsvp",
+      "format": "4s",
+      "surface": "grass",
+      "description": "Vintage Coed Quads — a Saturday coed 4s tournament on grass hosted by FVBL (@fvbleague), running out of the Newark/Fremont grass scene in the Bay Area. RSVP through the bit.ly form; that's the sign-up that actually feeds the organizers, the Facebook event is just the announcement. Quads plays on a full-size 6s court (the only FVBL format that does — 2s and 3s use a shorter court). Standard FVBL house rules: no open-hand passing on serve receive or rallies, set-overs only on 2nd/3rd touch and must be square, blocks don't count as a touch and can't redirect, no rotation fault but serve order is maintained, lets are live with one service attempt. Pool play into playoffs, one timeout per set, 5-minute warmups, late teams penalized at 10 minutes and forfeit at 20. Teams BYO whistle for reffing, plus BYO ball, food, shade, and water."
+    },
+    {
+      "id": "tlsports-grass-tbd-aug-2026",
+      "source": "tlsports",
+      "sourceUrl": "https://www.tl-sports.com/tournaments",
+      "name": "Grass Tournament — Format TBD",
+      "startDate": "2026-08-15",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [],
+      "surface": "grass",
+      "description": "Mid-summer grass tournament from The League Sports — format is still TBD as of the current tournaments page. TLS runs grass events from May through October and rotates between Reverse Coed Quads, Triples, and Doubles depending on the date; they note they're \"always open to new formats, if you have any suggestions, let us know.\" No registration date, gym, or entry fee posted yet — check tl-sports.com/tournaments as the date approaches, or reach out to info@tl-sports.com / 408-479-4403.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "info@tl-sports.com",
+              "phone": "408-479-4403"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noattitudes-endless-summer-2026",
+      "source": "noattitudes",
+      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
+      "name": "Endless Summer Classic",
+      "startDate": "2026-08-15",
+      "location": {
+        "venue": "Main Beach",
+        "city": "Santa Cruz",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed Novice",
+        "Coed Intermediate",
+        "Coed Advanced"
+      ],
+      "format": "4s",
+      "surface": "sand",
+      "notes": "70's THEME",
+      "description": "70's-themed August tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk). The league is throwing it back to the 70's for one groovy day on the sand — players are encouraged to come in retro beach vibes, disco energy, vintage sunnies, tube socks, bell bottoms, short shorts, funky prints, and bucket hats. Surfy, disco, hippie, or 70's beach-movie looks all welcome. Divisions: Coed Novice, Coed Intermediate, Women's, Men's, Teen's, and Coed 4v4 (at least two women on the court at all times; block doesn't count as a touch). Novice is for newer players still developing rules and skills (3 touches required, serve the better player); Intermediate expects consistent bump/set/spike and court awareness. Registration runs through the Beach Volleyball app only: $70/team early, $80/team late (rate jumps two weeks out). Saturday format: 8:30 AM check-in, 9:00 AM first serve, wrap ~3:30 PM. Pool play in groups of 4–6 to 21 or 25 (win by 2), then playoffs; self-officiated with non-playing teams reffing. Refunds with 72 hrs notice. Partner swaps allowed up to 2 hrs before start. Contact: noattitudesbvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "noattitudesbvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:30am"
+            },
+            {
+              "label": "First serve",
+              "value": "9:00am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Late",
+              "value": "$80 / team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tlsports-grass-tbd-sep-2026",
+      "source": "tlsports",
+      "sourceUrl": "https://www.tl-sports.com/tournaments",
+      "name": "Grass Tournament — Format TBD",
+      "startDate": "2026-09-12",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [],
+      "surface": "grass",
+      "description": "Late-summer grass tournament from The League Sports — format is still TBD as of the current tournaments page. One of the last stops on the TLS outdoor season (May–October) before VolleyBOO closes things out in October. TLS rotates between Reverse Coed Quads, Triples, and Doubles for these grass dates and welcomes format suggestions from the player community. No registration date, gym, or entry fee posted yet — watch tl-sports.com/tournaments or contact info@tl-sports.com / 408-479-4403 for updates.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "info@tl-sports.com",
+              "phone": "408-479-4403"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sfdynasty-40-and-over-2026-09",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "40 and Over COED",
+      "startDate": "2026-09-12",
+      "location": {
+        "city": "San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed",
+        "40+"
+      ],
+      "format": "6s",
+      "surface": "indoor"
+    },
+    {
+      "id": "noattitudes-serve-off-2026",
+      "source": "noattitudes",
+      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
+      "name": "Summer Serve Off",
+      "startDate": "2026-09-19",
+      "location": {
+        "venue": "Main Beach",
+        "city": "Santa Cruz",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed Novice",
+        "Coed Intermediate",
+        "Coed Advanced"
+      ],
+      "format": "4s",
+      "surface": "sand",
+      "notes": "90's POP THEME",
+      "description": "90's pop-themed September tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk). Expect 90's pop, hip hop, and nostalgia on the sound system all day — players are encouraged to dress to impress in windbreakers, neon, overalls, crop tops, jorts, bucket hats, chunky sunglasses, boy band energy, or full Spice Girls chaos. Divisions: Coed Intermediate, Coed Novice, Men's Advanced (1 player rated), Women's Advanced (1 player rated), and Teens. Novice is for newer players still developing rules and skills; Intermediate expects experienced rec play with consistent bump/set/spike; the Advanced gendered doubles require at least one CBVA-rated player per team (seeding by combined CBVA rating, points, and ranking). Registration is through the Beach Volleyball app only — search 'No Attitudes', $70/team early, $80/team late (rate jumps two weeks out). Saturday play, 8:30 AM check-in, 9:00 AM first serve, wrap ~3:30 PM. Pool play to 21/25 win-by-2 then playoffs, self-officiated with non-playing teams reffing; tournament staff have final say. Refund with 72 hrs notice. Contact: noattitudesbvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "noattitudesbvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:30am"
+            },
+            {
+              "label": "First serve",
+              "value": "9:00am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Late",
+              "value": "$80 / team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tlsports-volleyboo-2026",
+      "source": "tlsports",
+      "sourceUrl": "https://www.tl-sports.com/tournaments",
+      "name": "11th Annual VolleyBOO Reverse Coed Quads",
+      "startDate": "2026-10-10",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [
+        "Reverse Coed"
+      ],
+      "format": "4s",
+      "surface": "grass",
+      "description": "The 11th annual VolleyBOO — reverse coed costume quads on grass and, in TLS's own words, \"our biggest tournament every year!\" Registration opens August 30 at 10:00 AM. Every player gets an event t-shirt; cash prizes go to the best team costume and to all division winners, plus additional swag for division winners. From The League Sports: \"Thank you for the awesome turn out in 2025, the costumes as always are impressive especially those playing on the court in them! Save the date for the 11th Annual VolleyBOO — October 10th 2026!!!\" Expect a packed field and serious commitment to costumes that somehow still let you pass a ball. Questions: info@tl-sports.com / 408-479-4403.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "info@tl-sports.com",
+              "phone": "408-479-4403"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noattitudes-halloween-2026",
+      "source": "noattitudes",
+      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
+      "name": "Spiketacular Halloween Open",
+      "startDate": "2026-10-17",
+      "location": {
+        "venue": "Main Beach",
+        "city": "Santa Cruz",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed Novice",
+        "Coed Intermediate",
+        "Coed Advanced"
+      ],
+      "format": "4s",
+      "surface": "sand",
+      "description": "Halloween-themed October tournament from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Santa Cruz Beach Boardwalk). Costumes, competition, and candy on the court — players are encouraged to come in costume and bring the spooky-season energy. Divisions: Coed Novice, Coed Intermediate, Women's, Men's, Teen's, and Coed 4v4 (at least two women on the court at all times; block doesn't count as a touch). Novice is for newer players still developing rules and skills (3 touches required, serve the better player); Intermediate is for experienced rec players who bump/set/spike consistently and understand positioning. Registration runs through the Beach Volleyball app only — search 'No Attitudes': $70/team early, $80/team late (rate jumps two weeks out). Saturday format with 8:30 AM check-in, 9:00 AM first serve, wrap around 3:30 PM. Pool play in groups of 4–6 to 21 or 25 (win by 2), then playoffs; self-officiated with non-playing teams assigned to ref. Refunds with 72 hrs notice. Partners can be swapped up to 2 hours before start. Bring your own ball, pump, water, snacks, sunscreen — there's no formal lunch break. Contact: noattitudesbvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "noattitudesbvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "8:30am"
+            },
+            {
+              "label": "First serve",
+              "value": "9:00am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Late",
+              "value": "$80 / team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sfdynasty-mens-2026-10",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "Men's",
+      "startDate": "2026-10-18",
+      "location": {
+        "city": "San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "Men's"
+      ],
+      "format": "6s",
+      "surface": "indoor"
+    },
+    {
+      "id": "tlsports-mw-6s-nov-2026",
+      "source": "tlsports",
+      "sourceUrl": "https://www.tl-sports.com/tournaments",
+      "name": "Men's & Women's Indoor 6's",
+      "startDate": "2026-11-14",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [
+        "Men's",
+        "Women's"
+      ],
+      "format": "6s",
+      "surface": "indoor",
+      "description": "Indoor traditional 6's in separate Men's and Women's divisions — the late-season counterpart to the February event of the same format. Registration opens September 13 at 10:00 AM via the TLS VolleyballLife portal. Hosted by The League Sports, who run indoor volleyball year-round in the Bay Area and use these gendered 6's dates to round out a calendar that's otherwise heavy on reverse-coed formats. Gym, entry fee, and division levels (A/BB/B etc.) aren't posted on the tournaments page yet. Contact info@tl-sports.com or 408-479-4403 with questions.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "info@tl-sports.com",
+              "phone": "408-479-4403"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noattitudes-thanks-for-digs-2026",
+      "source": "noattitudes",
+      "sourceUrl": "https://www.noattitudesbeachvolleyball.com/upcoming-events",
+      "name": "Thanks for the Digs Classic",
+      "startDate": "2026-11-14",
+      "location": {
+        "venue": "Main Beach",
+        "city": "Santa Cruz",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed Novice",
+        "Coed Intermediate",
+        "Coed Advanced"
+      ],
+      "format": "4s",
+      "surface": "sand",
+      "notes": "HOLIDAY COSTUME THEME",
+      "description": "Holiday-costume-themed November finale from No Attitudes Beach Volleyball at Main Beach Santa Cruz (400 Beach St, next to the Boardwalk) — the final tournament of 2026 and a celebration of the league's first full year. Expect a full-on holiday beach party with volleyball, music, costumes, and nonstop vibes; players are encouraged to come in ugly sweaters, turkey hats, Santa gear, elf outfits, reindeer onesies, or whatever wild holiday energy they want. Divisions: Coed Advanced, Coed Intermediate, Coed Novice, Women's Unrated, Men's Unrated, and Teens. Advanced/Rated coed requires at least one CBVA-rated player (seeding by combined CBVA rating, points, and ranking); Intermediate expects experienced rec play with consistent bump/set/spike; Novice is for newer players still developing rules and skills; Unrated = no CBVA rating. Registration through the Beach Volleyball app only: $70/team early, $80/team late (rate jumps two weeks out). November Saturday format runs later — 9:30 AM check-in, 10:00 AM first serve, wrap ~3:30 PM. Pool play to 21/25 win-by-2 then playoffs, self-officiated with non-playing teams reffing. Refund with 72 hrs notice. Contact: noattitudesbvb@gmail.com.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "noattitudesbvb@gmail.com"
+            }
+          ]
+        },
+        {
+          "heading": "Schedule",
+          "items": [
+            {
+              "label": "Check-in",
+              "value": "9:30am"
+            },
+            {
+              "label": "First serve",
+              "value": "10:00am"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Late",
+              "value": "$80 / team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nagva-sactown-throwdown-2026",
+      "source": "nagva",
+      "sourceUrl": "https://www.nagva.org/tournaments-1/2026-sactown-throwdown",
+      "name": "2026 Sactown Throwdown",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-22",
+      "location": {
+        "venue": "Capital Sports Center",
+        "city": "McClellan Park",
+        "state": "CA"
+      },
+      "divisions": [
+        "B",
+        "BB",
+        "BB3",
+        "Legends B",
+        "Women's"
+      ],
+      "registrationDeadline": "2026-11-07",
+      "registrationUrl": "https://www.nagva.org/tournaments-1/2026-sactown-throwdown",
+      "format": "6s",
+      "surface": "indoor",
+      "notes": "NAGVA Sacramento-area tournament. Director: Gordon Li. Registrar: Karl Vinge. Payment deadlines July 25 / Sep 26 / Nov 7. Venmo @Karl-Vinge-1 with team name + city + division in memo. Refs/scorekeepers required — pay in advance via Venmo if your team can't supply one.",
+      "description": "The 2026 Sactown Throwdown is NAGVA's late-November Sacramento-area tournament, played Saturday-Sunday November 21-22, 2026 at Capital Sports Center, 5209 Luce Ave, McClellan Park, CA 95652 (a converted hangar facility on the former McClellan AFB just north of downtown Sacramento). The event is capped at 72 teams across five NAGVA skill divisions: B (28), BB (24), BB3 (24-team three-player BB sixes variant, 6 teams), Legends B (8), and Women's (6) — giving lower-intermediate and intermediate players, plus Legends-eligible (older-player) B teams, the bulk of the field. Entry fees are tiered at $500 / $550 / $600 across deadlines of July 25, September 26, and November 7, 2026, with a $60 additional-player fee; the waitlist priority date is September 26 and teams are confirmed in payment order. Payment is Venmo only, to @Karl-Vinge-1 (https://venmo.com/u/Karl-Vinge-1) — checks are not accepted; include team name, city, and division in the memo. Per NAGVA's standard work-team rule restated on the page: if your team does NOT bring its own certified ref/scorekeeper, you must pay for refs and scorekeepers on every match your team is assigned as the work team — teams are encouraged to prepay via Venmo or have a player get certified at nagva.org to avoid the fee. Tournament Director: Gordon Li; Registrar: Karl Vinge (info@nagva.org).",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Karl Vinge",
+              "email": "info@nagva.org"
+            }
+          ]
+        },
+        {
+          "heading": "Ratings",
+          "type": "ratings",
+          "axisLow": "Beginner",
+          "axisHigh": "Open",
+          "items": [
+            {
+              "label": "B",
+              "value": "28"
+            },
+            {
+              "label": "BB",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "heading": "Pricing",
+          "items": [
+            {
+              "label": "Standard",
+              "value": "$500"
+            }
+          ]
+        },
+        {
+          "heading": "Format",
+          "items": [
+            {
+              "label": "Team cap",
+              "value": "72"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tlsports-ugly-sweater-2026",
+      "source": "tlsports",
+      "sourceUrl": "https://www.tl-sports.com/tournaments",
+      "name": "8th Annual Ugly Sweater Power Rev Co",
+      "startDate": "2026-12-05",
+      "location": {
+        "city": "Bay Area",
+        "state": "CA"
+      },
+      "divisions": [
+        "Reverse Coed"
+      ],
+      "format": "6s",
+      "surface": "indoor",
+      "description": "The 8th annual Ugly Sweater tournament — Indoor Power Reverse Coed 6's, the TLS holiday tradition. From The League Sports: \"Reverse coed power 6's is our annual holiday tournament! Each year we say thanks to all the players who have supported TLS by showering teams with gifts and holiday goodies!\" Registration opens October 4 at 10:00 AM. Power format means men's net height with men and women on opposite sides from a traditional coed setup. Bring the worst sweater you can still pass in — this one's about closing out the year with the TLS community. Gym, entry fee, and division levels aren't posted on the tournaments page yet. Questions: info@tl-sports.com / 408-479-4403.",
+      "details": [
+        {
+          "heading": "Contact",
+          "type": "contacts",
+          "items": [
+            {
+              "label": "Organizer",
+              "email": "info@tl-sports.com",
+              "phone": "408-479-4403"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sfdynasty-winter-wonderland-2026-12",
+      "source": "sfdynasty",
+      "sourceUrl": "https://sfdynastyvb.com/upcoming-events",
+      "name": "Winter Wonderland Power COED",
+      "startDate": "2026-12-19",
+      "location": {
+        "city": "San Francisco",
+        "state": "CA"
+      },
+      "divisions": [
+        "Coed"
+      ],
+      "format": "6s",
+      "surface": "indoor"
     }
   ]
 }

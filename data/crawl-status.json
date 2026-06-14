@@ -1,0 +1,78 @@
+{
+  "startedAt": "2026-06-14T15:05:15.115Z",
+  "sources": {
+    "tlsports": {
+      "ok": false,
+      "durationMs": 1395,
+      "events": 0,
+      "added": 0,
+      "updated": 0,
+      "errors": [
+        "3 event(s) skipped (missing id or startDate)"
+      ]
+    },
+    "volleynation": {
+      "ok": true,
+      "durationMs": 358,
+      "events": 0,
+      "added": 0,
+      "updated": 0,
+      "errors": []
+    },
+    "armada": {
+      "ok": true,
+      "durationMs": 82,
+      "events": 0,
+      "added": 0,
+      "updated": 0,
+      "errors": []
+    },
+    "nagva": {
+      "ok": false,
+      "durationMs": 10056,
+      "events": 0,
+      "added": 0,
+      "updated": 0,
+      "errors": [
+        "nagva listing: fetch failed"
+      ]
+    },
+    "noattitudes": {
+      "ok": false,
+      "durationMs": 40,
+      "events": 0,
+      "added": 0,
+      "updated": 0,
+      "errors": [
+        "noattitudes home: fetch failed"
+      ]
+    },
+    "sfdynasty": {
+      "ok": false,
+      "durationMs": 95,
+      "events": 0,
+      "added": 0,
+      "updated": 0,
+      "errors": [
+        "sfdynasty home: fetch failed"
+      ]
+    },
+    "fvbl": {
+      "ok": false,
+      "durationMs": 1,
+      "events": 5,
+      "added": 0,
+      "updated": 0,
+      "errors": [
+        "fvbl: passthrough — Facebook/bit.ly not crawlable, see scripts/sources/fvbl.mjs"
+      ]
+    }
+  },
+  "finishedAt": "2026-06-14T15:05:27.145Z",
+  "totals": {
+    "sources": 7,
+    "fetched": 5,
+    "added": 0,
+    "updated": 0
+  }
+}
