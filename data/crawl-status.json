@@ -1,9 +1,9 @@
 {
-  "startedAt": "2026-06-26T15:20:47.379Z",
+  "startedAt": "2026-06-27T14:23:32.500Z",
   "sources": {
     "tlsports": {
       "ok": false,
-      "durationMs": 1764,
+      "durationMs": 1661,
       "events": 0,
       "added": 0,
       "updated": 0,
@@ -13,7 +13,7 @@
     },
     "volleynation": {
       "ok": true,
-      "durationMs": 636,
+      "durationMs": 563,
       "events": 0,
       "added": 0,
       "updated": 0,
@@ -21,7 +21,7 @@
     },
     "armada": {
       "ok": true,
-      "durationMs": 74,
+      "durationMs": 80,
       "events": 0,
       "added": 0,
       "updated": 0,
@@ -29,7 +29,7 @@
     },
     "nagva": {
       "ok": true,
-      "durationMs": 654,
+      "durationMs": 9054,
       "events": 0,
       "added": 0,
       "updated": 0,
@@ -37,7 +37,7 @@
     },
     "noattitudes": {
       "ok": false,
-      "durationMs": 37,
+      "durationMs": 104,
       "events": 0,
       "added": 0,
       "updated": 0,
@@ -47,7 +47,7 @@
     },
     "sfdynasty": {
       "ok": false,
-      "durationMs": 32,
+      "durationMs": 118,
       "events": 0,
       "added": 0,
       "updated": 0,
@@ -57,7 +57,7 @@
     },
     "fvbl": {
       "ok": false,
-      "durationMs": 1,
+      "durationMs": 2,
       "events": 5,
       "added": 0,
       "updated": 0,
@@ -66,7 +66,7 @@
       ]
     }
   },
-  "finishedAt": "2026-06-26T15:20:50.581Z",
+  "finishedAt": "2026-06-27T14:23:44.087Z",
   "totals": {
     "sources": 7,
     "fetched": 5,
